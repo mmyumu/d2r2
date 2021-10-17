@@ -1,29 +1,26 @@
+"""
+Expressionotrong is a bot module generating cool expressions
+"""
 import requests
 from bs4 import BeautifulSoup
 
-from d2r2.bot_module import BotModule
+from d2r2.bot import BotModule
 
 
 class Expressionotron(BotModule):
-    # def __init__(self, client: discord.Client) -> None:
-    #     super(Expressionotron, self).__init__(client)
+    """
+    Bot module generating expressions
+    """
+    async def on_message(self, message):
+        if message.author == self._client.user:
+            return
 
-    def _init_callbacks(self):
-        @self._client.event
-        async def on_ready():
-            self._logger.info(f"Ready (as {self._client.user})")
-
-        @self._client.event
-        async def on_message(message):
-            if message.author == self._client.user:
-                return
-
-            for user in message.mentions:
-                if user == self._client.user:
-                    exp, _ = self._get_expression()
-                    self._logger.debug("Mentioned in message")
-                    await message.channel.send(exp)
-                    break
+        for user in message.mentions:
+            if user == self._client.user and "omg" in message.content.lower():
+                exp, _ = self._get_expression()
+                self._logger.debug("Mentioned in message")
+                await message.channel.send(exp)
+                break
 
     @staticmethod
     def _get_expression():
