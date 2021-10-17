@@ -13,6 +13,7 @@ client = discord.Client()
 
 bot = Bot(client)
 bot.add_module(Expressionotron())
+bot.add_module(Kaamelott())
 
 with open(f"{pathlib.Path(__file__).parent.resolve()}/TOKEN", encoding="UTF-8") as f:
     token = f.readline()
