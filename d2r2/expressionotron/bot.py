@@ -12,11 +12,11 @@ class Expressionotron(BotModule):
     Bot module generating expressions
     """
     async def on_message(self, message):
-        if message.author == self._client.user:
+        if message.author == self._bot.user:
             return
 
         for user in message.mentions:
-            if user == self._client.user and "omg" in message.content.lower():
+            if user == self._bot.user and "omg" in message.content.lower():
                 exp, _ = self._get_expression()
                 self._logger.debug("Mentioned in message")
                 await message.channel.send(exp)

@@ -5,7 +5,7 @@ import logging
 from typing import List
 from abc import ABC, abstractmethod
 
-import discord
+from discord.ext import commands
 
 
 class BotModule(ABC):
@@ -16,7 +16,7 @@ class BotModule(ABC):
     def __init__(self) -> None:
         self._logger = create_logger(
             f"d2r2-bot_module-{self.__class__.__name__}")
-        self._client = None
+        self._bot = None
 
         self._logger.info("Module %s initialized", self.__class__.__name__)
 
@@ -24,11 +24,11 @@ class BotModule(ABC):
     async def on_message(self, message) -> None:
         pass
 
-    def set_client(self, client: discord.Client) -> None:
+    def set_bot(self, bot: commands.Bot) -> None:
         """
-        Set the discord Client
+        Set the discord Bot
         """
-        self._client = client
+        self._bot = bot
 
 
 class Bot:
@@ -36,8 +36,9 @@ class Bot:
     Bot main class
     """
 
-    def __init__(self, client: discord.Client) -> None:
-        self._client = client
+    def __init__(self) -> None:
+        super(Bot, self).__init__()
+        self._bot = commands.Bot(command_prefix="beep ")
         self._logger = create_logger("d2r2-bot")
 
         self._logger.info("Bot initialized")
@@ -48,11 +49,11 @@ class Bot:
         self._logger.info("Callbacks of bot initialized")
 
     def _init_callbacks(self) -> None:
-        @self._client.event
+        @self._bot.event
         async def on_ready():
-            self._logger.info("Ready (as %s)", self._client.user)
+            self._logger.info("Ready (as %s)", self._bot.user)
 
-        @self._client.event
+        @self._bot.event
         async def on_message(message) -> None:
             for module in self._modules:
                 await module.on_message(message)
@@ -61,8 +62,11 @@ class Bot:
         """
         Add a bot module to the Bot
         """
-        module.set_client(self._client)
+        module.set_bot(self._bot)
         self._modules.append(module)
+
+    def run(self, token: str):
+        self._bot.run(token)
 
 
 def create_logger(logger_name: str) -> logging.Logger:
