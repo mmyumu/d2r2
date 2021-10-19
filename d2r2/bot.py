@@ -3,12 +3,12 @@ Module containing common stuff for bot modules
 """
 import logging
 from typing import List
-from abc import ABC, abstractmethod
 
+import discord
 from discord.ext import commands
 
 
-class BotModule(ABC):
+class BotModule():
     """
     Abstract class to be implemented by bot modules
     """
@@ -20,9 +20,10 @@ class BotModule(ABC):
 
         self._logger.info("Module %s initialized", self.__class__.__name__)
 
-    @abstractmethod
-    async def on_message(self, message) -> None:
-        pass
+    async def on_message(self, message: discord.Message) -> None:
+        """
+        Triggered when a message is received
+        """
 
     def set_bot(self, bot: commands.Bot) -> None:
         """
@@ -66,6 +67,9 @@ class Bot:
         self._modules.append(module)
 
     def run(self, token: str):
+        """
+        Run the discord bot with given token
+        """
         self._bot.run(token)
 
 
