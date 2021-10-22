@@ -1,6 +1,13 @@
 {
   "dependencies": {
-    "discord.js": "^13.2.0"
+    "@discordjs/builders": "^0.7.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "cheerio": "^1.0.0-rc.10",
+    "console-stamp": "^3.0.3",
+    "discord-api-types": "^0.24.0",
+    "discord.js": "^13.2.0",
+    "follow-redirects": "^1.14.4",
+    "log-timestamp": "^0.3.0"
   },
   "devDependencies": {
     "eslint": "^8.0.1"
