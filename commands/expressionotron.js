@@ -6,7 +6,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('omg')
-		.setDescription('Génère une expression "pour exprimer ton étonnement partout sur le net"'),
+		.setDescription('Generate an expression so you can "exprimer ton étonnement partout sur le net"'),
 	async execute(interaction) {
         await interaction.deferReply();
 
