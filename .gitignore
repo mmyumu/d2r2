@@ -3,3 +3,6 @@ config.json
 
 # Node
 node_modules
+
+# VS Code
+.vscode
