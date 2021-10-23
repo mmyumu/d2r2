@@ -1,3 +1,6 @@
+# Ignore resources
+resources
+
 # Configuration including TOKEN
 config.json
 
