@@ -8,6 +8,7 @@ const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('
 
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
+	console.log(`Command ${command.data.name} is being registered in guild ${guildId}`);
 	commands.push(command.data.toJSON());
 }
 

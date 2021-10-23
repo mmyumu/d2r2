@@ -3,7 +3,6 @@ const { Client, Collection, Intents } = require('discord.js');
 const { token } = require('./config.json');
 require('log-timestamp');
 
-// const client = new Discord.Client({ ws: { intents: ['GUILD_PRESENCES', 'GUILD_MEMBERS'] }});
 const client = new Client({ fetchAllMembers: true, intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_VOICE_STATES] });
 
 client.commands = new Collection();

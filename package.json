@@ -10,7 +10,8 @@
     "ffmpeg-static": "^4.4.0",
     "follow-redirects": "^1.14.4",
     "libsodium-wrappers": "^0.7.9",
-    "log-timestamp": "^0.3.0"
+    "log-timestamp": "^0.3.0",
+    "string-similarity": "^4.0.4"
   },
   "devDependencies": {
     "eslint": "^8.0.1"
