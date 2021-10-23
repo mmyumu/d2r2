@@ -1,0 +1,37 @@
+{
+  "dependencies": {
+    "@discordjs/builders": "^0.7.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "@discordjs/voice": "^0.6.0",
+    "cheerio": "^1.0.0-rc.10",
+    "console-stamp": "^3.0.3",
+    "discord-api-types": "^0.24.0",
+    "discord.js": "^13.2.0",
+    "ffmpeg-static": "^4.4.0",
+    "follow-redirects": "^1.14.4",
+    "libsodium-wrappers": "^0.7.9",
+    "log-timestamp": "^0.3.0",
+    "string-similarity": "^4.0.4"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1"
+  },
+  "name": "d2r2",
+  "description": "",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmyumu/d2r2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmyumu/d2r2/issues"
+  },
+  "homepage": "https://github.com/mmyumu/d2r2#readme"
+}
