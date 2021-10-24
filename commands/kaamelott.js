@@ -59,6 +59,11 @@ async function searchForSounds(dataFile, interaction) {
     const keywords = interaction.options.getString('keywords');
     const target = interaction.options.getMentionable('target');
 
+    if (!keywords) {
+        await interaction.editReply({ content: 'You must specify keywords', ephemeral: true });
+        return ;
+    }
+
     const matches = stringSimilarity.findBestMatch(sanitize_title(keywords), get_all_sounds_titles(dataFile));
 
     let found_sounds = [];
