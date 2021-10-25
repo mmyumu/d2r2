@@ -34,6 +34,7 @@ module.exports = {
                 await playSound(dataFile, interaction);
             }
         } else if (interaction.isSelectMenu()) {
+            await interaction.deferUpdate();
             const tokens = interaction.customId.split('|');
 
             let member = null;
@@ -43,7 +44,7 @@ module.exports = {
                 member = interaction.guild.members.cache.get(interaction.member.user.id);
             }
 
-            await interaction.update({ content: 'Sound was selected', components: [] });
+            await interaction.editReply({ content: 'Sound was selected', components: [] });
             const voiceChannel = member.voice.channel;
             playSoundInVoiceChannel(interaction, interaction.values[0], voiceChannel);
         }
