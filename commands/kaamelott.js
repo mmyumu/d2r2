@@ -4,6 +4,8 @@ const stringSimilarity = require('string-similarity');
 const { joinVoiceChannel, createAudioResource, createAudioPlayer, AudioPlayerStatus } = require('@discordjs/voice');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageActionRow, MessageSelectMenu } = require('discord.js');
+const { v4: uuidv4 } = require('uuid');
+const { commands } = require('../cached_commands');
 
 
 module.exports = {
@@ -14,7 +16,7 @@ module.exports = {
             subcommand
                 .setName('search')
                 .setDescription('Search for Kaamelott sounds with keywords')
-                .addStringOption(option => option.setName('keywords').setDescription('Keywords to find specific sound'))
+                .addStringOption(option => option.setName('keywords').setDescription('Keywords to find specific sound').setRequired(true))
                 .addMentionableOption(option => option.setName('target').setDescription('Play the sound in the channel of target user')))
         .addSubcommand(subcommand =>
             subcommand
@@ -37,12 +39,14 @@ module.exports = {
             await interaction.deferUpdate();
             const tokens = interaction.customId.split('|');
 
-            let member = null;
+            let target = null;
             if (tokens.length > 1) {
-                member = interaction.guild.members.cache.get(tokens[1]);
-            } else {
-                member = interaction.guild.members.cache.get(interaction.member.user.id);
+                const interaction_command = commands[tokens[1]];
+                target = interaction_command.options.getMentionable('target');
+                delete commands[tokens[1]];
             }
+            let member = null;
+            member = getMember(interaction, target);
 
             await interaction.editReply({ content: 'Sound was selected', components: [] });
             const voiceChannel = member.voice.channel;
@@ -83,7 +87,9 @@ async function searchForSounds(dataFile, interaction) {
 
         let target_id_str = '';
         if (target) {
-            target_id_str = `|${target.id}`;
+            const cmd_uuid = uuidv4();
+            commands[cmd_uuid] = interaction;
+            target_id_str = `|${cmd_uuid}`;
         }
 
         const row = new MessageActionRow()
