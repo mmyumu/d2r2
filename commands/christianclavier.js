@@ -10,7 +10,7 @@ module.exports = {
 		await interaction.deferReply();
 
         get_synopsis(async function(expr) {
-            console.debug(`Return expression: ${expr}`);
+            console.debug(`Return synopsis: ${expr}`);
             await interaction.editReply(expr);
         });
 	},
