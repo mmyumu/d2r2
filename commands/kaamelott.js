@@ -162,7 +162,7 @@ function getSoundName(dataFile, sound, keywords) {
 
 async function playSoundInVoiceChannel(interaction, soundName, voiceChannel) {
     if (!voiceChannel) {
-        await interaction.editReply({ content: 'You must be in a voice channel', ephemeral: true });
+        await interaction.editReply({ content: 'The target must be in a voice channel', ephemeral: true });
         return;
     }
 
