@@ -9,14 +9,14 @@ module.exports = {
 	async execute(interaction) {
 		await interaction.deferReply();
 
-        get_synopsis(async function(expr) {
+        getSynopsis(async function(expr) {
             console.debug(`Return synopsis: ${expr}`);
             await interaction.editReply(expr);
         });
 	},
 };
 
-function get_synopsis(callback) {
+function getSynopsis(callback) {
     const options = {
         hostname: 'depression.cool',
         port: 443,
