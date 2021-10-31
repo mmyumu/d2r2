@@ -1,0 +1,107 @@
+{
+    "host": "zonesons.com",
+    "movies": [
+        {
+            "path": "/repliques-cultes-de-comedie/phrases-cultes-de-la-classe-americaine-1993/",
+            "sounds": [
+                {
+                    "title": "A mon avis, juif et arabe, c'est bizarre",
+                    "file": "/citations/clasa/A-mon-avis-juif-et-arabe-cest-bizarre.mp3"
+                },
+                {
+                    "title": "Alors, on peut plus _ tranquille?",
+                    "file": "/citations/clasa/Alors-on-peut-plus-chier-tranquille.mp3"
+                },
+                {
+                    "title": "Bon, lui, il va me prendre la tete",
+                    "file": "/citations/clasa/Bon-lui-il-va-me-prendre-la-tete.mp3"
+                },
+                {
+                    "title": "Bonjour C'est moi, Orson Welles",
+                    "file": "/citations/clasa/Bonjour-Cest-moi-Orson-Welles.mp3"
+                },
+                {
+                    "title": "C'est ma maison, la derriere Pas mal, non? C'est français",
+                    "file": "/citations/clasa/Cest-ma-maison-la-derriere-Pas-mal-non-Cest-francais.mp3"
+                },
+                {
+                    "title": "C'est quoi ça? Oh, va te faire _ Me faire _? OK, j'y vais",
+                    "file": "/citations/clasa/Cest-quoi-ca-Oh-va-te-faire-foutre-Me-faire-foutre-OK-jy-vais.mp3"
+                },
+                {
+                    "title": "C'est une excellente question. A la ferme La ferme? Quelle ferme? Ah la ferme ta gueule toi, ducon, espece de crétin",
+                    "file": "/citations/clasa/Cest-une-excellente-question-A-la-ferme-La-ferme-Quelle-ferme-Ah-la-ferme-ta-gueule-toi-ducon-espece-de-cretin.mp3"
+                },
+                {
+                    "title": "Ça daube, ça daube!",
+                    "file": "/citations/clasa/Ca-daube-ca-daube!.mp3"
+                },
+                {
+                    "title": "Ça devient pesant, cette histoire de pédés Tout le monde s'acharne sur nous alors qu'on est meme pas pédés Oui, je sais",
+                    "file": "/citations/clasa/Ca-devient-pesant-cette-histoire-de-pedes-Tout-le-monde-sacharne-sur-nous-alors-quon-est-meme-pas-pedes-Oui-je-sais.mp3"
+                }
+            ]
+        },
+        {
+            "path": "/repliques-cultes-de-science-fiction/phrases-cultes-de-star-wars-episode-vi-le-retour-du-jedi/",
+            "sounds": [
+                {
+                    "title": "A chaque instant qui passe, tu deviens un peu plus mon serviteur",
+                    "file": "/citations/sw6/A-chaque-instant-qui-passe-tu-deviens-un-peu-plus-mon-serviteur.mp3"
+                },
+                {
+                    "title": "Au lieu d'un flou noir, je vois un flou lumineux",
+                    "file": "/citations/sw6/Au-lieu-dun-flou-noir-je-vois-un-flou-lumineux.mp3"
+                },
+                {
+                    "title": "Bonjour",
+                    "file": "/citations/sw6/Bonjour.mp3"
+                },
+                {
+                    "title": "C'est imprudent d'abaisser ta garde",
+                    "file": "/citations/sw6/Cest-imprudent-dabaisser-ta-garde.mp3"
+                },
+                {
+                    "title": "Je suis désolé",
+                    "file": "/citations/sw6/Je-suis-desole.mp3"
+                },
+                {
+                    "title": "L'Empereur ne partage pas votre appréciation optimiste de la situation",
+                    "file": "/citations/sw6/LEmpereur-ne-partage-pas-votre-appreciation-optimiste-de-la-situation.mp3"
+                },
+                {
+                    "title": "Vole l'air décontracté",
+                    "file": "/citations/sw6/Vole-lair-decontracte.mp3"
+                },
+                {
+                    "title": "Beaucoup de vérités auxquelles nous tenons dépendent de notre point de vue",
+                    "file": "/citations/sw6/Beaucoup-de-verites-auxquelles-nous-tenons-dependent-de-notre-point-de-vue.mp3"
+                },
+                {
+                    "title": "Maintenant, son échec est total",
+                    "file": "/citations/sw6/Maintenant-son-echec-est-total.mp3"
+                },
+                {
+                    "title": "Qu'est-ce que j'ai dit?",
+                    "file": "/citations/sw6/Questce-que-jai-dit.mp3"
+                },
+                {
+                    "title": "Une fois que tu t'engages vers le côté obscur, a jamais, il dominera ton destin",
+                    "file": "/citations/sw6/Une-fois-que-tu-tengages-vers-le-cote-obscur-a-jamais-il-dominera-ton-destin.mp3"
+                },
+                {
+                    "title": "Yoda sera toujours avec toi",
+                    "file": "/citations/sw6/Yoda-sera-toujours-avec-toi.mp3"
+                },
+                {
+                    "title": "Alors, je suis un Jedi",
+                    "file": "/citations/sw6/Alors-je-suis-un-Jedi.mp3"
+                },
+                {
+                    "title": "Attends! Reviens!",
+                    "file": "/citations/sw6/Attends!-Reviens!.mp3"
+                }
+            ]
+        }
+    ]
+}

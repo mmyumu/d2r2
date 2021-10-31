@@ -1,0 +1,43 @@
+{
+    "host": "zonesons.com",
+    "movies": [
+        {
+            "path": "/repliques-cultes-de-comedie/phrases-cultes-de-la-classe-americaine-1993/",
+            "sounds": [
+                {
+                    "title": "A mon avis, juif et arabe, c'est bizarre",
+                    "file": "/citations/clasa/A-mon-avis-juif-et-arabe-cest-bizarre.mp3"
+                },
+                {
+                    "title": "Alors, on peut plus _ tranquille?",
+                    "file": "/citations/clasa/Alors-on-peut-plus-chier-tranquille.mp3"
+                },
+                {
+                    "title": "Bon, lui, il va me prendre la tete",
+                    "file": "/citations/clasa/Bon-lui-il-va-me-prendre-la-tete.mp3"
+                }
+            ]
+        },
+        {
+            "path": "/repliques-cultes-de-science-fiction/phrases-cultes-de-star-wars-episode-vi-le-retour-du-jedi/",
+            "sounds": [
+                {
+                    "title": "A chaque instant qui passe, tu deviens un peu plus mon serviteur",
+                    "file": "/citations/sw6/A-chaque-instant-qui-passe-tu-deviens-un-peu-plus-mon-serviteur.mp3"
+                },
+                {
+                    "title": "Au lieu d'un flou noir, je vois un flou lumineux",
+                    "file": "/citations/sw6/Au-lieu-dun-flou-noir-je-vois-un-flou-lumineux.mp3"
+                },
+                {
+                    "title": "Bonjour",
+                    "file": "/citations/sw6/Bonjour.mp3"
+                },
+                {
+                    "title": "C'est imprudent d'abaisser ta garde",
+                    "file": "/citations/sw6/Cest-imprudent-dabaisser-ta-garde.mp3"
+                }
+            ]
+        }
+    ]
+}
