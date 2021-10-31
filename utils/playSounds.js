@@ -78,7 +78,7 @@ async function searchForSounds(commandName, sounds, interaction) {
         return;
     }
 
-    const matches = stringSimilarity.findBestMatch(sanitize_title(keywords), getAllSoundsTitles(sounds));
+    const matches = stringSimilarity.findBestMatch(sanitizeTitle(keywords), getAllSoundsTitles(sounds));
 
     let foundSounds = [];
     for (const [index, r] of matches.ratings.entries()) {
@@ -168,7 +168,7 @@ function getSoundName(sounds, sound, keywords) {
             }
         }
     } else if (keywords) {
-        const matches = stringSimilarity.findBestMatch(sanitize_title(keywords), getAllSoundsTitles());
+        const matches = stringSimilarity.findBestMatch(sanitizeTitle(keywords), getAllSoundsTitles(sounds));
         soundName = sounds[matches.bestMatchIndex].file;
     }
 
@@ -224,13 +224,13 @@ async function playSoundInVoiceChannel(interaction, soundName, voiceChannel, res
 function getAllSoundsTitles(sounds) {
     const soundsTitles = [];
     for (const d of Object.values(sounds)) {
-        soundsTitles.push(sanitize_title(d.title));
+        soundsTitles.push(sanitizeTitle(d.title));
     }
 
     return soundsTitles;
 }
 
-function sanitize_title(title) {
+function sanitizeTitle(title) {
     const accent = [
         /[\300-\306]/g, /[\340-\346]/g, // A, a
         /[\310-\313]/g, /[\350-\353]/g, // E, e
