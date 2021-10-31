@@ -1,0 +1,573 @@
+{
+    "host": "ouich.es",
+    "sounds": [
+        {
+            "title": "chili",
+            "file": "chili.mp3"
+        },
+        {
+            "title": "balles",
+            "file": "balles.mp3"
+        },
+        {
+            "title": "fuser",
+            "file": "fuser.mp3"
+        },
+        {
+            "title": "cyclimse",
+            "file": "cyclimse.mp3"
+        },
+        {
+            "title": "acte",
+            "file": "acte.mp3"
+        },
+        {
+            "title": "ouiche",
+            "file": "ouiche.mp3"
+        },
+        {
+            "title": "pipeau",
+            "file": "pipeau.mp3"
+        },
+        {
+            "title": "conneries",
+            "file": "conneries.mp3"
+        },
+        {
+            "title": "philosophes",
+            "file": "philosophes.mp3"
+        },
+        {
+            "title": "muscle",
+            "file": "muscle.mp3"
+        },
+        {
+            "title": "amis",
+            "file": "amis.mp3"
+        },
+        {
+            "title": "croire",
+            "file": "croire.mp3"
+        },
+        {
+            "title": "choucroute",
+            "file": "choucroute.mp3"
+        },
+        {
+            "title": "gene",
+            "file": "gene.mp3"
+        },
+        {
+            "title": "tchernobyl",
+            "file": "tchernobyl.mp3"
+        },
+        {
+            "title": "trouble",
+            "file": "trouble.mp3"
+        },
+        {
+            "title": "battre",
+            "file": "battre.mp3"
+        },
+        {
+            "title": "jeune",
+            "file": "jeune.mp3"
+        },
+        {
+            "title": "fax",
+            "file": "fax.mp3"
+        },
+        {
+            "title": "idee",
+            "file": "idee.mp3"
+        },
+        {
+            "title": "poudre",
+            "file": "poudre.mp3"
+        },
+        {
+            "title": "lave",
+            "file": "lave.mp3"
+        },
+        {
+            "title": "nom",
+            "file": "nom.mp3"
+        },
+        {
+            "title": "democrate",
+            "file": "democrate.mp3"
+        },
+        {
+            "title": "celebre",
+            "file": "celebre.mp3"
+        },
+        {
+            "title": "savoirvivre",
+            "file": "savoirvivre.mp3"
+        },
+        {
+            "title": "pasteques",
+            "file": "pasteques.mp3"
+        },
+        {
+            "title": "helicoptere",
+            "file": "helicoptere.mp3"
+        },
+        {
+            "title": "chemin",
+            "file": "chemin.mp3"
+        },
+        {
+            "title": "qualite",
+            "file": "qualite.mp3"
+        },
+        {
+            "title": "ferme",
+            "file": "ferme.mp3"
+        },
+        {
+            "title": "minable",
+            "file": "minable.mp3"
+        },
+        {
+            "title": "convaincu",
+            "file": "convaincu.mp3"
+        },
+        {
+            "title": "clim",
+            "file": "clim.mp3"
+        },
+        {
+            "title": "content",
+            "file": "content.mp3"
+        },
+        {
+            "title": "pop",
+            "file": "pop.mp3"
+        },
+        {
+            "title": "cinq",
+            "file": "cinq.mp3"
+        },
+        {
+            "title": "cons",
+            "file": "cons.mp3"
+        },
+        {
+            "title": "tendre",
+            "file": "tendre.mp3"
+        },
+        {
+            "title": "divorce",
+            "file": "divorce.mp3"
+        },
+        {
+            "title": "joue",
+            "file": "joue.mp3"
+        },
+        {
+            "title": "fromage",
+            "file": "fromage.mp3"
+        },
+        {
+            "title": "dring",
+            "file": "dring.mp3"
+        },
+        {
+            "title": "bac",
+            "file": "bac.mp3"
+        },
+        {
+            "title": "excuses",
+            "file": "excuses.mp3"
+        },
+        {
+            "title": "just",
+            "file": "just.mp3"
+        },
+        {
+            "title": "poete",
+            "file": "poete.mp3"
+        },
+        {
+            "title": "reveil",
+            "file": "reveil.mp3"
+        },
+        {
+            "title": "hasbeen",
+            "file": "hasbeen.mp3"
+        },
+        {
+            "title": "surpuissant",
+            "file": "surpuissant.mp3"
+        },
+        {
+            "title": "elvis",
+            "file": "elvis.mp3"
+        },
+        {
+            "title": "foutre",
+            "file": "foutre.mp3"
+        },
+        {
+            "title": "pesant",
+            "file": "pesant.mp3"
+        },
+        {
+            "title": "aider",
+            "file": "aider.mp3"
+        },
+        {
+            "title": "meufs",
+            "file": "meufs.mp3"
+        },
+        {
+            "title": "chier",
+            "file": "chier.mp3"
+        },
+        {
+            "title": "droite",
+            "file": "droite.mp3"
+        },
+        {
+            "title": "sourd",
+            "file": "sourd.mp3"
+        },
+        {
+            "title": "apresmidi",
+            "file": "apresmidi.mp3"
+        },
+        {
+            "title": "seins",
+            "file": "seins.mp3"
+        },
+        {
+            "title": "brille",
+            "file": "brille.mp3"
+        },
+        {
+            "title": "reve",
+            "file": "reve.mp3"
+        },
+        {
+            "title": "cul",
+            "file": "cul.mp3"
+        },
+        {
+            "title": "pietons",
+            "file": "pietons.mp3"
+        },
+        {
+            "title": "assassine",
+            "file": "assassine.mp3"
+        },
+        {
+            "title": "menageres",
+            "file": "menageres.mp3"
+        },
+        {
+            "title": "aime",
+            "file": "aime.mp3"
+        },
+        {
+            "title": "voleurs",
+            "file": "voleurs.mp3"
+        },
+        {
+            "title": "courageux",
+            "file": "courageux.mp3"
+        },
+        {
+            "title": "sucer",
+            "file": "sucer.mp3"
+        },
+        {
+            "title": "tranquille",
+            "file": "tranquille.mp3"
+        },
+        {
+            "title": "string",
+            "file": "string.mp3"
+        },
+        {
+            "title": "classe",
+            "file": "classe.mp3"
+        },
+        {
+            "title": "rougir",
+            "file": "rougir.mp3"
+        },
+        {
+            "title": "capotes",
+            "file": "capotes.mp3"
+        },
+        {
+            "title": "niquer",
+            "file": "niquer.mp3"
+        },
+        {
+            "title": "burgers",
+            "file": "burgers.mp3"
+        },
+        {
+            "title": "fesses",
+            "file": "fesses.mp3"
+        },
+        {
+            "title": "espagnol",
+            "file": "espagnol.mp3"
+        },
+        {
+            "title": "francais",
+            "file": "francais.mp3"
+        },
+        {
+            "title": "tomate",
+            "file": "tomate.mp3"
+        },
+        {
+            "title": "amour",
+            "file": "amour.mp3"
+        },
+        {
+            "title": "bienvenue",
+            "file": "bienvenue.mp3"
+        },
+        {
+            "title": "effetsspeciaux",
+            "file": "effetsspeciaux.mp3"
+        },
+        {
+            "title": "amalgame",
+            "file": "amalgame.mp3"
+        },
+        {
+            "title": "playboy",
+            "file": "playboy.mp3"
+        },
+        {
+            "title": "facteur",
+            "file": "facteur.mp3"
+        },
+        {
+            "title": "bordel",
+            "file": "bordel.mp3"
+        },
+        {
+            "title": "sexe",
+            "file": "sexe.mp3"
+        },
+        {
+            "title": "gentil",
+            "file": "gentil.mp3"
+        },
+        {
+            "title": "prive",
+            "file": "prive.mp3"
+        },
+        {
+            "title": "duel",
+            "file": "duel.mp3"
+        },
+        {
+            "title": "botter",
+            "file": "botter.mp3"
+        },
+        {
+            "title": "plusdutout",
+            "file": "plusdutout.mp3"
+        },
+        {
+            "title": "mondedemerde",
+            "file": "mondedemerde.mp3"
+        },
+        {
+            "title": "journalisme",
+            "file": "journalisme.mp3"
+        },
+        {
+            "title": "mystere",
+            "file": "mystere.mp3"
+        },
+        {
+            "title": "discuter",
+            "file": "discuter.mp3"
+        },
+        {
+            "title": "buse",
+            "file": "buse.mp3"
+        },
+        {
+            "title": "mode",
+            "file": "mode.mp3"
+        },
+        {
+            "title": "premier",
+            "file": "premier.mp3"
+        },
+        {
+            "title": "fringues",
+            "file": "fringues.mp3"
+        },
+        {
+            "title": "plaisantais",
+            "file": "plaisantais.mp3"
+        },
+        {
+            "title": "megachiasse",
+            "file": "megachiasse.mp3"
+        },
+        {
+            "title": "cravate",
+            "file": "cravate.mp3"
+        },
+        {
+            "title": "con",
+            "file": "con.mp3"
+        },
+        {
+            "title": "bonbons",
+            "file": "bonbons.mp3"
+        },
+        {
+            "title": "sape",
+            "file": "sape.mp3"
+        },
+        {
+            "title": "tomber",
+            "file": "tomber.mp3"
+        },
+        {
+            "title": "touffe",
+            "file": "touffe.mp3"
+        },
+        {
+            "title": "puissance",
+            "file": "puissance.mp3"
+        },
+        {
+            "title": "ouf",
+            "file": "ouf.mp3"
+        },
+        {
+            "title": "meconnaissable",
+            "file": "meconnaissable.mp3"
+        },
+        {
+            "title": "recommencer",
+            "file": "recommencer.mp3"
+        },
+        {
+            "title": "chips",
+            "file": "chips.mp3"
+        },
+        {
+            "title": "savoir",
+            "file": "savoir.mp3"
+        },
+        {
+            "title": "blaireau",
+            "file": "blaireau.mp3"
+        },
+        {
+            "title": "pipoter",
+            "file": "pipoter.mp3"
+        },
+        {
+            "title": "pins",
+            "file": "pins.mp3"
+        },
+        {
+            "title": "indiscret",
+            "file": "indiscret.mp3"
+        },
+        {
+            "title": "regimes",
+            "file": "regimes.mp3"
+        },
+        {
+            "title": "cheveux",
+            "file": "cheveux.mp3"
+        },
+        {
+            "title": "decision",
+            "file": "decision.mp3"
+        },
+        {
+            "title": "ranch",
+            "file": "ranch.mp3"
+        },
+        {
+            "title": "breakdown",
+            "file": "breakdown.mp3"
+        },
+        {
+            "title": "nichons",
+            "file": "nichons.mp3"
+        },
+        {
+            "title": "hommes",
+            "file": "hommes.mp3"
+        },
+        {
+            "title": "renseignement",
+            "file": "renseignement.mp3"
+        },
+        {
+            "title": "tronche",
+            "file": "tronche.mp3"
+        },
+        {
+            "title": "tolerance",
+            "file": "tolerance.mp3"
+        },
+        {
+            "title": "julienlepers",
+            "file": "julienlepers.mp3"
+        },
+        {
+            "title": "anglais",
+            "file": "anglais.mp3"
+        },
+        {
+            "title": "comprendre",
+            "file": "comprendre.mp3"
+        },
+        {
+            "title": "injures",
+            "file": "injures.mp3"
+        },
+        {
+            "title": "manchot",
+            "file": "manchot.mp3"
+        },
+        {
+            "title": "grave",
+            "file": "grave.mp3"
+        },
+        {
+            "title": "cafe",
+            "file": "cafe.mp3"
+        },
+        {
+            "title": "tete",
+            "file": "tete.mp3"
+        },
+        {
+            "title": "demerder",
+            "file": "demerder.mp3"
+        },
+        {
+            "title": "partouzeurs",
+            "file": "partouzeurs.mp3"
+        },
+        {
+            "title": "costume",
+            "file": "costume.mp3"
+        },
+        {
+            "title": "bizarres",
+            "file": "bizarres.mp3"
+        }
+    ]
+}
