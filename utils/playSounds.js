@@ -3,7 +3,7 @@ const { join } = require('path');
 const stringSimilarity = require('string-similarity');
 const { joinVoiceChannel, createAudioResource, createAudioPlayer, AudioPlayerStatus } = require('@discordjs/voice');
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageActionRow, MessageSelectMenu } = require('discord.js');
+const { MessageActionRow, MessageSelectMenu, MessageEmbed } = require('discord.js');
 const { v4: uuidv4 } = require('uuid');
 const discordUtils = require('./discordUtils');
 const { commands } = require('../cached_commands');
@@ -50,7 +50,7 @@ async function execute(commandName, interaction, sounds, resourceDir) {
         } else if (interaction.options.getSubcommand() === 'play') {
             await playSound(sounds, interaction, resourceDir);
         } else if (interaction.options.getSubcommand() === 'list') {
-            await listSounds(interaction);
+            await listSounds(commandName, sounds, interaction);
         }
     } else if (interaction.isSelectMenu()) {
         await interaction.deferUpdate();
@@ -128,8 +128,58 @@ function forgeOptions(sounds) {
     return options;
 }
 
-async function listSounds(interaction) {
-    await interaction.editReply({ content: 'Not implemented', ephemeral: true });
+function createEmbed(commandName) {
+    const title = `List of ${commandName} sounds`;
+    const description = `You can use /${commandName} play sound:<sound name> with the following names`;
+
+    return new MessageEmbed()
+        .setColor('#0099ff')
+        .setTitle(title)
+        // .setURL('https://discord.js.org/')
+        // .setAuthor('Some name', 'https://i.imgur.com/AfFp7pu.png', 'https://discord.js.org')
+        .setDescription(description);
+}
+
+async function listSounds(commandName, sounds, interaction) {
+    const client = interaction.client;
+
+    const user = client.users.cache.get(interaction.member.user.id);
+
+    const listEmbeds = [];
+
+    const sortedSounds = Object.values(sounds).map(value => value).sort((a, b) => a.file.localeCompare(b.file));
+
+    let value = '';
+    const fields = [];
+    for (const index in sortedSounds) {
+        const sound = sortedSounds[index];
+        const soundName = sound.file.slice(0, sound.file.length - 4);
+        if (value.length + ('\n' + soundName).length > 1024) {
+            fields.push(value);
+            value = '';
+        }
+        value += '\n' + soundName;
+    }
+    fields.push(value);
+
+    let listEmbed = createEmbed(commandName);
+    for (const index in fields) {
+        const field = fields[index];
+
+        if (listEmbed.length + field.length > 6000) {
+            listEmbeds.push(listEmbed);
+            listEmbed = createEmbed(commandName);
+        }
+        listEmbed.addField('Sound name', field, true);
+    }
+    listEmbeds.push(listEmbed);
+
+    for (const index in listEmbeds) {
+        const embed = listEmbeds[index];
+        user.send({ embeds: [embed] }).catch(console.error);
+    }
+
+    await interaction.editReply({ content: 'List sent in private message', ephemeral: true });
 }
 
 async function playSound(sounds, interaction, resourceDir) {
