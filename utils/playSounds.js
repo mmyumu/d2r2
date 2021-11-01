@@ -5,11 +5,13 @@ const { joinVoiceChannel, createAudioResource, createAudioPlayer, AudioPlayerSta
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageActionRow, MessageSelectMenu } = require('discord.js');
 const { v4: uuidv4 } = require('uuid');
+const discordUtils = require('./discordUtils');
 const { commands } = require('../cached_commands');
 
 module.exports = {
     buildCommand,
     execute,
+    playSoundInVoiceChannel,
 };
 
 function buildCommand(commandName, description) {
@@ -60,8 +62,7 @@ async function execute(commandName, interaction, sounds, resourceDir) {
             target = interaction_command.options.getMentionable('target');
             delete commands[tokens[1]];
         }
-        let member = null;
-        member = getMember(interaction, target);
+        const member = discordUtils.getMember(interaction, target);
 
         await interaction.editReply({ content: 'Sound was selected', components: [] });
         const voiceChannel = member.voice.channel;
@@ -136,21 +137,13 @@ async function playSound(sounds, interaction, resourceDir) {
     const sound = interaction.options.getString('sound');
     const target = interaction.options.getMentionable('target');
 
-    const member = getMember(interaction, target);
+    const member = discordUtils.getMember(interaction, target);
 
     const soundName = getSoundName(sounds, sound, keywords);
 
     const voiceChannel = member.voice.channel;
 
     await playSoundInVoiceChannel(interaction, soundName, voiceChannel, resourceDir);
-}
-
-function getMember(interaction, target) {
-    if (target) {
-        return target;
-    } else {
-        return interaction.guild.members.cache.get(interaction.member.user.id);
-    }
 }
 
 function getSoundName(sounds, sound, keywords) {
@@ -192,12 +185,10 @@ async function playSoundInVoiceChannel(interaction, soundName, voiceChannel, res
         adapterCreator: voiceChannel.guild.voiceAdapterCreator,
     });
 
-    if (!soundName.endsWith('.mp3')) {
+    if (!soundName.endsWith('.mp3') && !soundName.endsWith('.WAV')) {
         soundName += '.mp3';
     }
 
-    // const mp3_path = join(__dirname, `/resources/ouiche/${soundName}`);
-    // const mp3Path = `${resourceDir}/${soundName}`;
     const mp3Path = join(__dirname, `../commands/${resourceDir}/${soundName}`);
     console.debug(`Playing ${soundName}`);
     const resource = createAudioResource(mp3Path, {
