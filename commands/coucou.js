@@ -1,6 +1,9 @@
 const fs = require('fs');
+const http = require('../utils/http.js');
 const { join } = require('path');
 const { SlashCommandBuilder } = require('@discordjs/builders');
+const cfg = require('./coucou.json');
+
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -8,14 +11,15 @@ module.exports = {
 		.setDescription('Coucou !'),
 	async execute(interaction) {
 		await interaction.deferReply({ ephemeral: true });
-        const orig = join(__dirname, '../resources/coucou/orig/R2-D2.png');
+
         const dest = join(__dirname, '../resources/coucou/upload.png');
 
-        fs.copyFileSync(orig, dest);
+        // const coucouJSON = await http.getJSON(cfg.host, cfg.path, cfg.port);
+        await http.downloadFile(cfg.host, cfg.path, dest, cfg.port);
         const client = interaction.client;
         const user = client.users.cache.get(interaction.member.user.id);
         await user.send({
-            files: ['./resources/coucou/upload.png'],
+            files: [dest],
         });
 
         fs.unlinkSync(dest);
