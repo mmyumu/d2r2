@@ -3,6 +3,9 @@ resources
 
 # Configuration including TOKEN
 config.json
+all_config.json
+config_dev.json
+config_prod.json
 
 # Node
 node_modules
