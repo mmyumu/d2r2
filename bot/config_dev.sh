@@ -1,0 +1,1 @@
+cp ./config/config_dev.json ./config.json

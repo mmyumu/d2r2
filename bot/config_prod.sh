@@ -1,0 +1,1 @@
+cp ./config/config_prod.json ./config.json
