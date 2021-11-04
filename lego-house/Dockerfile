@@ -5,10 +5,6 @@ RUN mkdir /root/logs
 
 RUN pip install flask
 RUN pip install gunicorn
-#ENV READTHEDOCS=true
-#RUN pip install picamera
-#RUN python -m pip show flask
-#RUN READTHEDOCS=True pip install picamera
 COPY picamera /usr/local/lib/python3.10/site-packages/
 COPY . .
 
