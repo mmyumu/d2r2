@@ -2,7 +2,7 @@ const fs = require('fs');
 const http = require('../utils/http.js');
 const { join } = require('path');
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const cfg = require('./coucou.json');
+const cfg = require('../config.json')['coucou'];
 
 
 module.exports = {
@@ -14,7 +14,6 @@ module.exports = {
 
         const dest = join(__dirname, '../resources/coucou/upload.png');
 
-        // const coucouJSON = await http.getJSON(cfg.host, cfg.path, cfg.port);
         await http.downloadFile(cfg.host, cfg.path, dest, cfg.port);
         const client = interaction.client;
         const user = client.users.cache.get(interaction.member.user.id);
