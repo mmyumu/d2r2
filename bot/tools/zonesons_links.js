@@ -34,12 +34,12 @@ async function parsePage(path, page) {
     const pagePath = forgePagePath(path, page);
     console.log(`${pagePath}`);
 
-    const $ = await http.getPage(zonesonsJSON.host, pagePath);
+    const $ = await http.getPage(zonesonsJSON.host, pagePath, 443);
     return getQuotesFromPage($);
 }
 
 async function parseMoviePage(moviePagePath) {
-    const $ = await http.getPage(zonesonsJSON.host, moviePagePath);
+    const $ = await http.getPage(zonesonsJSON.host, moviePagePath, 443);
     const maxPage = getMaxPage($);
     console.log(`Number of pages found: ${maxPage}`);
 

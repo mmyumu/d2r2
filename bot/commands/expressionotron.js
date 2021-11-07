@@ -10,14 +10,14 @@ module.exports = {
 	async execute(interaction) {
         await interaction.deferReply();
 
-        get_expression(async function(expr) {
+        getExpression(async function(expr) {
             console.debug(`Return expression: ${expr}`);
             await interaction.editReply(expr);
         });
 	},
 };
 
-function get_expression(callback) {
+function getExpression(callback) {
     const options = {
         hostname: 'nioutaik.fr',
         port: 80,

@@ -1,0 +1,11 @@
+{
+	"clientId": "xxxxxxxxxxxxxxxxxxxx",
+	"guildId": "xxxxxxxxxxxxxxxxxxxx",
+	"token": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+
+	"coucou" : {
+		"host": "x.x.x.x",
+		"port": 10001,
+		"path": "coucou"
+	}
+}

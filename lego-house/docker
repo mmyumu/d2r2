@@ -1,0 +1,21 @@
+# Build only x64
+#docker build -t lego-house:0.1.0 .
+
+# Install qemu for multi-arch builds
+docker run --rm --privileged multiarch/qemu-user-static --reset -p yes
+
+# When there is error when building
+docker run --privileged --rm tonistiigi/binfmt --install all
+
+# Build multi-platform but it cannot be imported in raspberry arm64
+#docker buildx build -t lego-house:0.1.0-arm64 --platform linux/amd64,linux/arm64 --output "type=tar,dest=lego-house.tar" .
+
+# Builds platform separately with diferent tags
+docker buildx build -t lego-house:0.1.0 --platform linux/amd64 --load .
+docker buildx build -t lego-house:0.1.0-arm64 --platform linux/arm64 --load 
+docker buildx build -t lego-house:0.1.0-armv7 --platform linux/arm/v7 --load .
+
+docker run -p 10001:10001 -v /home/mmyumu/git/lego-house/logs:/root/logs --restart=unless-stopped --name=lego-house -d lego-house:0.1.0
+
+# On Raspberry pi
+docker run -p 10001:10001 --env LD_LIBRARY_PATH=/opt/vc/lib -v /opt/vc:/opt/vc -v /home/pi/docker/lego-house/logs:/root/logs --restart=unless-stopped --name=lego-house -d lego-house:0.1.0-armv7
