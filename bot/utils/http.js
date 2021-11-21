@@ -3,12 +3,16 @@ const fr = require('follow-redirects');
 const fs = require('fs');
 
 function forgeOptions(hostname, port, path) {
+    delete require.cache[require.resolve('../config.json')];
+    const cfg = require('../config.json');
+
     return {
         hostname: hostname,
         port: port,
         path: path,
         method: 'GET',
         headers: { 'User-Agent': 'Mozilla/5.0' },
+        timeout: cfg.timeout,
     };
 }
 
@@ -83,6 +87,11 @@ function downloadFile(hostname, path, output, port, https) {
             });
         });
 
+        // use its "timeout" event to abort the request
+        req.on('timeout', () => {
+            console.error('Request timeout');
+            reject();
+        });
 
         req.on('error', error => {
             console.error(error);
