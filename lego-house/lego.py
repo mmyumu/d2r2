@@ -7,9 +7,9 @@ from post_process import post_process
 app = Flask(__name__, static_url_path='')
 
 
-@app.route("/")
-def hello_world():
-    return "<p>Hello, World!</p>"
+@app.route("/ping")
+def ping():
+    return "Pong"
 
 
 @app.route('/coucou')
