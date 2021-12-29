@@ -7,7 +7,7 @@ const commands = [];
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
-	const command = require(`..docker run --restart=unless-stopped --name=d2r2 -d d2r2:0.2.0docker run --restart=unless-stopped --name=d2r2 -d d2r2:0.2.0/commands/${file}`);
+	const command = require(`../commands/${file}`);
 	console.log(`Command ${command.data.name} is being unregistered in guild ${guildId}`);
 	commands.push(command.data.toJSON());
 }
