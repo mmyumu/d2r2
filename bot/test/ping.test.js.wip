@@ -1,0 +1,10 @@
+import {MockMessage, MockTextChannel} from "jest-discordjs-mocks";
+ 
+test("discord.js mock test", () => {
+    const message = new MockMessage();
+    const channel = new MockTextChannel();
+    message.content = "test";
+    message.channel = channel;
+    callMyFunctionToTestHere(message);
+    expect(message.channel.send).toHaveBeenCalled()
+});
