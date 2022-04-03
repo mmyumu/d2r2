@@ -1,5 +1,4 @@
-const cheerio = require('cheerio');
-const https = require('follow-redirects').https;
+const http = require('../utils/http.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
@@ -14,37 +13,10 @@ module.exports = {
             await interaction.editReply(expr);
         });
 	},
+    getSynopsis,
 };
 
-function getSynopsis(callback) {
-    const options = {
-        hostname: 'depression.cool',
-        port: 443,
-        path: '/clavier/',
-        method: 'GET',
-		headers: { 'User-Agent': 'Mozilla/5.0' },
-    };
-
-    console.debug(`Get synopsis: ${options.hostname}:${options.port}/${options.path} (${options.method})`);
-
-    const req = https.request(options, res => {
-         console.debug(`statusCode: ${res.statusCode}`);
-
-        let str = '';
-        res.on('data', chunk => {
-            str += chunk;
-        });
-
-        res.on('end', () => {
-            const $ = cheerio.load(str);
-            callback($('p').text());
-        });
-
-    });
-
-    req.on('error', error => {
-        console.error(error);
-    });
-
-    req.end();
+async function getSynopsis() {
+    const $ = await http.getPage('depression.cool', '/clavier/', 443);
+    return $('p').text();
 }
