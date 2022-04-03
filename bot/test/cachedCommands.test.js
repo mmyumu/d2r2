@@ -2,7 +2,7 @@ import { commands}  from '../src/utils/cachedCommands';
 //import { v4: uuidv4 } from 'uuid';
 import { v4 as uuidv4 } from 'uuid';
 
-test("cachedCommands test", () => {
+test("cachedCommands add and delete", () => {
     var dummyCommand = 'dummy';
     const cmdUuid = uuidv4();
 
