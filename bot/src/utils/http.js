@@ -44,7 +44,7 @@ function getRaw(hostname, path, port, https) {
 
     return new Promise((resolve, reject) => {
         const req = m.request(options, res => {
-            console.debug(`statusCode: ${res.statusCode}`);
+            console.debug(`Requesting ${JSON.stringify(options)}, statusCode: ${res.statusCode}`);
 
             let str = '';
             res.on('data', chunk => {
