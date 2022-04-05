@@ -8,10 +8,9 @@ module.exports = {
 	async execute(interaction) {
 		await interaction.deferReply();
 
-        getSynopsis(async function(expr) {
-            console.debug(`Return synopsis: ${expr}`);
-            await interaction.editReply(expr);
-        });
+        const synopsis = await getSynopsis();
+        console.debug(`Return synopsis: ${synopsis}`);
+        await interaction.editReply(synopsis);
 	},
     getSynopsis,
 };
