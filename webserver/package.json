@@ -1,0 +1,15 @@
+{
+  "name": "webserver",
+  "version": "1.0.0",
+  "description": "D2R2 WebServer",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "mmyumu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
