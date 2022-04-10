@@ -1,7 +1,7 @@
 const resourceDir = '../resources/tfbh';
-const templates = require(`${resourceDir}/modeles.json`);
-const conjunctions = require(`${resourceDir}/conjonctions.json`);
-const words = require(`${resourceDir}/mots.json`);
+const resTemplates = require(`${resourceDir}/modeles.json`);
+const resConjunctions = require(`${resourceDir}/conjonctions.json`);
+const resWords = require(`${resourceDir}/mots.json`);
 const { MessageAttachment } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { registerFont, createCanvas, loadImage } = require('canvas');
@@ -32,10 +32,10 @@ module.exports = {
             }
 
             if (lines_count == 1) {
-                const lines = buildLines();
+                const lines = buildLines(resWords, resTemplates, resConjunctions);
                 attachment = await buildAttachment(lines[0]);
             } else if (lines_count == 2) {
-                const lines = buildLines(true);
+                const lines = buildLines(resWords, resTemplates, resConjunctions, true);
                 attachment = await buildAttachment(lines[0], lines[1]);
             }
 
@@ -50,9 +50,10 @@ module.exports = {
             interaction.editReply({ content: 'Invalid request', ephemeral: true });
         }
 	},
+    buildLines,
 };
 
-function flattenWords() {
+function flattenWords(words) {
     const flattenedWords = [];
     for (const category in words) {
         for (const wordIdx in words[category]) {
@@ -62,8 +63,8 @@ function flattenWords() {
     return flattenedWords;
 }
 
-function buildLines(use_conjunction = false) {
-    const flattenedWords = flattenWords();
+function buildLines(words, templates, conjunctions, use_conjunction = false) {
+    const flattenedWords = flattenWords(words);
 
     const lines = [];
 
