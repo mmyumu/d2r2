@@ -1,4 +1,8 @@
-const { MessageAttachment, MessageActionRow, MessageSelectMenu } = require('discord.js');
+const resourceDir = '../resources/tfbh';
+const templates = require(`${resourceDir}/modeles.json`);
+const conjunctions = require(`${resourceDir}/conjonctions.json`);
+const words = require(`${resourceDir}/mots.json`);
+const { MessageAttachment } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { registerFont, createCanvas, loadImage } = require('canvas');
 
@@ -8,76 +12,90 @@ module.exports = {
 		.setDescription('Try finger but hole')
         .addSubcommand(subcommand =>
             subcommand
-                .setName('1')
-                .setDescription('Create a one line message')
-                .addStringOption(option => option.setName('keywords').setDescription('Keywords to find specific expression').setRequired(true)))
+                .setName('random')
+                .setDescription('Create a random message')
+                .addIntegerOption(option => option.setName('lines').setDescription('Number of lines').addChoice('1', 1).addChoice('2', 2)))
         .addSubcommand(subcommand =>
             subcommand
-                .setName('2')
-                .setDescription('Create a two lines message')
-                .addStringOption(option => option.setName('keywords1').setDescription('Keywords to find specific expression for line 1').setRequired(true))
-                .addStringOption(option => option.setName('keywords2').setDescription('Keywords to find specific expression for line 2').setRequired(true))),
+                .setName('custom')
+                .setDescription('Create a custom message')),
 	async execute(interaction) {
 		await interaction.deferReply();
 
-        const row = new MessageActionRow()
-            .addComponents(
-                new MessageSelectMenu()
-                    .setCustomId('select')
-                    .setPlaceholder('Nothing selected')
-                    .setMinValues(2)
-                    .setMaxValues(3)
-                    .addOptions([
-                        {
-                            label: 'Select me',
-                            description: 'This is a description',
-                            value: 'first_option',
-                        },
-                        {
-                            label: 'You can select me too',
-                            description: 'This is also a description',
-                            value: 'second_option',
-                        },
-                        {
-                            label: 'I am also an option',
-                            description: 'This is a description as well',
-                            value: 'third_option',
-                        },
-                    ]),
-            )
-            .addComponents(
-                new MessageSelectMenu()
-                    .setCustomId('select')
-                    .setPlaceholder('Nothing selected2')
-                    .setMinValues(2)
-                    .setMaxValues(3)
-                    .addOptions([
-                        {
-                            label: 'Select me',
-                            description: 'This is a description',
-                            value: 'first_option',
-                        },
-                        {
-                            label: 'You can select me too',
-                            description: 'This is also a description',
-                            value: 'second_option',
-                        },
-                        {
-                            label: 'I am also an option',
-                            description: 'This is a description as well',
-                            value: 'third_option',
-                        },
-                    ]),
-            );
-        await interaction.editReply({ content: 'Pong!', components: [row] });
+        if (interaction.options.getSubcommand() === 'random') {
+            let attachment = null;
 
-        // const attachment = await buildAttachment('foule droit devant');
-        // const attachment = await buildAttachment('Ahh, je n\'y crois pas... en vue..,', 'déjà vu quelque part......');
-        // const embed = await buildEmbed('Ahh, je n\'y crois pas... en vue..,', 'déjà vu quelque part......');
+            let lines_count = interaction.options.getInteger('lines');
 
-        // interaction.editReply({ files: [attachment] });
+            if (!lines_count) {
+                lines_count = Math.floor(Math.random() * 2) + 1;
+            }
+
+            if (lines_count == 1) {
+                const lines = buildLines();
+                attachment = await buildAttachment(lines[0]);
+            } else if (lines_count == 2) {
+                const lines = buildLines(true);
+                attachment = await buildAttachment(lines[0], lines[1]);
+            }
+
+            if (attachment) {
+                interaction.editReply({ files: [attachment] });
+            } else {
+                interaction.editReply({ content: 'Cannot generate message', ephemeral: true });
+            }
+        } else if (interaction.options.getSubcommand() === 'custom') {
+            interaction.editReply({ content: 'Not implemented yet', ephemeral: true });
+        } else {
+            interaction.editReply({ content: 'Invalid request', ephemeral: true });
+        }
 	},
 };
+
+function flattenWords() {
+    const flattenedWords = [];
+    for (const category in words) {
+        for (const wordIdx in words[category]) {
+            flattenedWords.push(words[category][wordIdx]);
+        }
+    }
+    return flattenedWords;
+}
+
+function buildLines(use_conjunction = false) {
+    const flattenedWords = flattenWords();
+
+    const lines = [];
+
+    if (use_conjunction) {
+        const conjunction = conjunctions[Math.floor(Math.random() * conjunctions.length)];
+        const word1 = flattenedWords[Math.floor(Math.random() * flattenedWords.length)];
+        const word2 = flattenedWords[Math.floor(Math.random() * flattenedWords.length)];
+
+        const template1 = templates[Math.floor(Math.random() * templates.length)];
+        const template2 = templates[Math.floor(Math.random() * templates.length)];
+
+        let line1 = template1.replace('****', word1);
+        let line2 = template2.replace('****', word2);
+
+        if (conjunction['line'] == 1) {
+            line1 = line1 + conjunction['text'];
+        } else if (conjunction['line'] == 2) {
+            line2 = conjunction['text'] + ' ' + line2;
+        }
+
+        lines.push(line1);
+        lines.push(line2);
+    } else {
+        const word1 = flattenedWords[Math.floor(Math.random() * flattenedWords.length)];
+        const template1 = templates[Math.floor(Math.random() * templates.length)];
+
+        const line1 = template1.replace('****', word1);
+        lines.push(line1);
+    }
+
+    return lines;
+}
 
 async function buildAttachment(line1, line2 = false) {
     const canvas = await buildCanvas(line1, line2);
