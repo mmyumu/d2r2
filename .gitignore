@@ -1,5 +1,6 @@
 # Ignore resources
-resources
+*.mp3
+*.WAV
 
 # Configuration including TOKEN
 config.json

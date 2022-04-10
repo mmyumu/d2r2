@@ -1,7 +1,11 @@
 module.exports = {
     name: 'interactionCreate',
     execute(interaction) {
-        console.log(`${interaction.user.tag} in #${interaction.channel.name} triggered an interaction.`);
+        if (!interaction.channel || interaction.channel.type === 'DM') {
+            console.log(`${interaction.user.tag} in DM triggered an interaction: ${interaction.commandName}`);
+        } else {
+            console.log(`${interaction.user.tag} in #${interaction.channel.name} triggered an interaction: ${interaction.commandName}`);
+        }
 
         // if (!interaction.isCommand() && !interaction.isSelectMenu()) return;
 

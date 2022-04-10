@@ -6,7 +6,7 @@ const { SlashCommandBuilder } = require('@discordjs/builders');
 const { MessageActionRow, MessageSelectMenu, MessageEmbed } = require('discord.js');
 const { v4: uuidv4 } = require('uuid');
 const discordUtils = require('./discordUtils');
-const { commands } = require('./cached_commands');
+const { commands } = require('./cachedCommands');
 
 module.exports = {
     buildCommand,
@@ -143,7 +143,7 @@ function createEmbed(commandName) {
 async function listSounds(commandName, sounds, interaction) {
     const client = interaction.client;
 
-    const user = client.users.cache.get(interaction.member.user.id);
+    const user = client.users.cache.get(interaction.user.id);
 
     const listEmbeds = [];
 
