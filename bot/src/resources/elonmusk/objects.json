@@ -1,0 +1,54 @@
+{
+	"global warming": {
+		"tags": ["bad"]
+	},
+	"wars": {
+		"tags": ["bad"]
+	},
+	"poverty": {
+		"tags": ["bad"]
+	},
+	"COVID": {
+		"tags": ["bad"]
+	},
+	"dictatorship": {
+		"tags": ["bad"]
+	},
+	"diseases": {
+		"tags": ["bad"]
+	},
+	"insecurity": {
+		"tags": ["bad"]
+	},
+	"myself": {
+		"tags": ["bad"]
+	},
+	"drugs": {
+		"tags": ["bad"]
+	},
+	
+	"space": {
+		"tags": ["good"]
+	},
+	"life on earth": {
+		"tags": ["good"]
+	},
+	"Earth": {
+		"tags": ["good"]
+	},
+	"cats": {
+		"tags": ["good"]
+	},
+	"the universe": {
+		"tags": ["good"]
+	},
+	"free speech": {
+		"tags": ["good"]
+	},
+	"vaccine": {
+		"tags": ["good"]
+	},
+	"biodiversity": {
+		"tags": ["good"]
+	}
+}
