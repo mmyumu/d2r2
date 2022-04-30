@@ -1,0 +1,101 @@
+{
+	"ban": {
+		"tags": ["bad"]
+	},
+	"destroy": {
+		"tags": ["bad"]
+	},
+	"dismantle": {
+		"tags": ["bad"]
+	},
+	"annihilate": {
+		"tags": ["bad"]
+	},
+	"eradicate": {
+		"tags": ["bad"]
+	},
+	"erase": {
+		"tags": ["bad"]
+	},
+	"extinguish": {
+		"tags": ["bad"]
+	},
+	"sabotage": {
+		"tags": ["bad"]
+	},
+	"ruin": {
+		"tags": ["bad"]
+	},
+	"abort": {
+		"tags": ["bad"]
+	},
+	"damage": {
+		"tags": ["bad"]
+	},
+	"smash": {
+		"tags": ["bad"]
+	},
+	"wreck": {
+		"tags": ["bad"]
+	},
+	"shatter": {
+		"tags": ["bad"]
+	},
+	"suppress": {
+		"tags": ["bad"]
+	},
+	"restrict": {
+		"tags": ["bad"]
+	},
+	"exclude": {
+		"tags": ["bad"]
+	},
+	"unban": {
+		"tags": ["good"]
+	},
+	"save": {
+		"tags": ["good"]
+	},
+	"free": {
+		"tags": ["good"]
+	},
+	"defend": {
+		"tags": ["good"]
+	},
+	"protect": {
+		"tags": ["good"]
+	},
+	"liberate": {
+		"tags": ["good"]
+	},
+	"support": {
+		"tags": ["good"]
+	},
+	"assist": {
+		"tags": ["good"]
+	},
+	"aid": {
+		"tags": ["good"]
+	},
+	"develop": {
+		"tags": ["good"]
+	},
+	"encourage": {
+		"tags": ["good"]
+	},
+	"promote": {
+		"tags": ["good"]
+	},
+	"strengthen": {
+		"tags": ["good"]
+	},
+	"help": {
+		"tags": ["good"]
+	},
+	"restore": {
+		"tags": ["good"]
+	},
+	"raise": {
+		"tags": ["good"]
+	}
+}
