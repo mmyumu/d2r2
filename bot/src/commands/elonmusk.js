@@ -15,7 +15,7 @@ module.exports = {
 
         let attachment = null;
 
-        const line = buildLine(Math.random() < 0.5);
+        const line = buildLine(resCompanies, resActions, resObjects, Math.random() < 0.5);
         attachment = await buildAttachment(line);
 
         if (attachment) {
