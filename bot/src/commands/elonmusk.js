@@ -90,7 +90,7 @@ async function buildCanvas(line) {
     }
 
     // Select the font size and type from one of the natively available fonts
-    context.font = `${fontSize}px TwitterChirp, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`;
+    context.font = `${fontSize}px TwitterChirp, FreeSans`;
 
     // Select the style that will be used to fill the text in
     context.fillStyle = '#152025';
