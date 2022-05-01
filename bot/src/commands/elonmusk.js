@@ -84,10 +84,13 @@ async function buildCanvas(line) {
     // This uses the canvas dimensions to stretch the image onto the entire canvas
     context.drawImage(background, 0, 0, canvas.width, canvas.height);
 
-    // context.strokeRect(0, 0, canvas.width, canvas.height);
+    let fontSize = 23;
+    if (line.length > 50) {
+        fontSize = 20;
+    }
 
     // Select the font size and type from one of the natively available fonts
-    context.font = '23px TwitterChirp, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif';
+    context.font = `${fontSize}px TwitterChirp, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif`;
 
     // Select the style that will be used to fill the text in
     context.fillStyle = '#152025';
