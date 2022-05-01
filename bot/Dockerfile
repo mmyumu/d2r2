@@ -4,6 +4,8 @@ WORKDIR /root
 
 COPY package*.json ./
 
+RUN apt update
+RUN apt install fonts-freefont-ttf
 RUN npm install
 
 ADD src .
