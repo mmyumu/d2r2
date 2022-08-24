@@ -26,6 +26,9 @@
 	"drugs": {
 		"tags": ["bad"]
 	},
+	"NFT": {
+		"tags": ["bad"]
+	},
 	
 	"space": {
 		"tags": ["good"]
