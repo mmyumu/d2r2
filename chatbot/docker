@@ -1,0 +1,8 @@
+# Build only x64
+docker build -t chatbot:0.1.0 .
+
+# Run dev
+docker run -e CHATBOT_PASSWORD='xxx' -p 10002:10002 -v /home/mmyumu/git/d2r2/chatbot/logs:/root/logs --restart=unless-stopped --name=chatbot -d chatbot:0.1.0
+
+# Run prod
+docker run -e CHATBOT_PASSWORD='xxx' -p 10002:10002 -v /home/mmyumu/docker/chatbot/logs:/root/logs --restart=unless-stopped --name=chatbot -d chatbot:0.1.0
