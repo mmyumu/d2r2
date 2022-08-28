@@ -16,18 +16,26 @@ module.exports = {
         const dest = join(__dirname, '../resources/coucou/upload.png');
 
         const client = interaction.client;
-        const user = client.users.cache.get(interaction.member.user.id);
+        const user = client.users.cache.get(interaction.user.id);
 
         try {
+            removeFile(dest);
+            await interaction.editReply({ content: 'I am trying to say hello but it might take some time...please be patient', components: [] });
             await http.downloadFile(cfg.host, cfg.path, dest, cfg.port);
-            fs.unlinkSync(dest);
 
             await user.send({
                 files: [dest],
             });
+            removeFile(dest);
         } catch (error) {
-            await user.send('Désolé, je ne suis pas prêt pour vous faire un petit coucou');
+            await user.send('Sorry I am not ready to say hello');
         }
         await interaction.editReply({ content: 'Coucou sent in private message', ephemeral: true });
 	},
 };
+
+function removeFile(dest) {
+    if (fs.existsSync(dest)) {
+        fs.unlinkSync(dest);
+    }
+}
