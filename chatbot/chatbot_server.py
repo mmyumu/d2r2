@@ -6,6 +6,8 @@ import hashlib
 app = Flask(__name__, static_url_path='')
 PASSWORD = os.getenv('CHATBOT_PASSWORD')
 
+chatbot = ChatBot()
+
 
 @app.route("/ping")
 def ping():
@@ -20,7 +22,6 @@ def bot():
     if md5_password != hashlib.md5(PASSWORD.encode('utf-8')).hexdigest():
         return "Password incorrect", 403
 
-    chatbot = ChatBot()
     bot_response = chatbot.tell(sentence)
 
     return bot_response, 200
