@@ -34,7 +34,7 @@ class ChatBot:
         
         response = completion.create(
             prompt=prompt, engine="davinci", stop=["\n", "H:", "AI:"], temperature=0.5,
-            top_p=1, frequency_penalty=0, presence_penalty=0.6, best_of=1,
+            top_p=1, frequency_penalty=0, presence_penalty=0.1, best_of=1,
             max_tokens=max_tokens)
         answer = response.choices[0].text.strip()
 
@@ -75,7 +75,7 @@ class ChatBot:
             return False
 
         # It probably means the bot did not understand the question
-        if answer.lower() in ["bip-boup", "bip-boup?", "bip-boup!", "bip-boup ?", "bip-boup !"]:
+        if answer.lower() in ["bip-boup", "bip-boup?", "bip-boup!", "bip-boup.", "bip-boup ?", "bip-boup !", "bip-boup ."]:
             return False
 
         # The bot just repeated the question...
