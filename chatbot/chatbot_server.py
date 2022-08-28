@@ -14,8 +14,8 @@ def ping():
 
 @app.route('/bot', methods=['POST'])
 def bot():
-    md5_password = request.form.get('password')
-    sentence = request.form.get('sentence')
+    md5_password = request.json.get('password')
+    sentence = request.json.get('sentence')
 
     if md5_password != hashlib.md5(PASSWORD.encode('utf-8')).hexdigest():
         return "Password incorrect", 403

@@ -2,16 +2,34 @@ const cheerio = require('cheerio');
 const fr = require('follow-redirects');
 const fs = require('fs');
 
-function forgeOptions(hostname, port, path) {
+function forgeOptions(hostname, port, path, method, data) {
     delete require.cache[require.resolve('../config.json')];
     const cfg = require('../config.json');
+
+    if (method === undefined) {
+        method = 'GET';
+    }
+
+    let headers = {};
+    if (data !== undefined) {
+        headers = {
+            'User-Agent': 'Mozilla/5.0',
+            // 'Content-Type': 'application/x-www-form-urlencoded',
+            'Content-Type': 'application/json'
+            // 'Content-Length': data.length
+        }
+    } else {
+        headers = {
+            'User-Agent': 'Mozilla/5.0'
+        }
+    }
 
     return {
         hostname: hostname,
         port: port,
         path: path,
-        method: 'GET',
-        headers: { 'User-Agent': 'Mozilla/5.0' },
+        method: method,
+        headers: headers,
         timeout: cfg.timeout,
     };
 }
@@ -28,18 +46,28 @@ function getModule(port, https) {
 }
 
 async function getJSON(hostname, path, port, https) {
-    const result = await getRaw(hostname, path, port, https);
+    const result = await get(hostname, path, port, https);
     return JSON.parse(result);
 }
 
 async function getPage(hostname, path, port, https) {
-    const result = await getRaw(hostname, path, port, https);
+    const result = await get(hostname, path, port, https);
     return cheerio.load(result);
 }
 
-function getRaw(hostname, path, port, https) {
-    const options = forgeOptions(hostname, port, path);
+function get(hostname, path, port, https) {
+    const options = forgeOptions(hostname, port, path, 'GET');
+    return request(port, https, options);
+}
 
+function post(hostname, path, port, https, data) {
+    const data_str = JSON.stringify(data);
+
+    const options = forgeOptions(hostname, port, path, 'POST', data_str);
+    return request(port, https, options, data_str);
+}
+
+function request(port, https, options, data) {
     const m = getModule(port, https);
 
     return new Promise((resolve, reject) => {
@@ -62,12 +90,15 @@ function getRaw(hostname, path, port, https) {
             reject(error);
         });
 
+        if (data !== undefined) {
+            req.write(data);
+        }
         req.end();
     });
-}
+} 
 
 function downloadFile(hostname, path, output, port, https) {
-    const options = forgeOptions(hostname, port, path);
+    const options = forgeOptions(hostname, port, path, 'GET');
 
     const m = getModule(port, https);
 
@@ -103,7 +134,9 @@ function downloadFile(hostname, path, output, port, https) {
 }
 
 module.exports = {
+    get,
     getPage,
     getJSON,
     downloadFile,
+    post,
 };
