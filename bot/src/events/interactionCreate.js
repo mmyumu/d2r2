@@ -1,6 +1,6 @@
 module.exports = {
     name: 'interactionCreate',
-    execute(interaction) {
+    execute(client, interaction) {
         if (!interaction.channel || interaction.channel.type === 'DM') {
             console.log(`${interaction.user.tag} in DM triggered an interaction: ${interaction.commandName}`);
         } else {
@@ -19,8 +19,8 @@ module.exports = {
 
         if (!commandId) return;
 
-        const client = interaction.client;
-        const command = client.commands.get(commandId);
+        const user_client = interaction.client;
+        const command = user_client.commands.get(commandId);
 
         if (!command) return;
 

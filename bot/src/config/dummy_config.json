@@ -7,5 +7,12 @@
 		"host": "x.x.x.x",
 		"port": 10001,
 		"path": "coucou"
+	},
+
+	"chatbot" : {
+		"host": "127.0.0.1",
+		"port": 10002,
+		"path": "bot",
+		"password": "xxx"
 	}
 }
