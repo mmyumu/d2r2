@@ -1,6 +1,7 @@
 import os
 import random
 import datetime
+import json
 
 import openai
 
@@ -8,16 +9,11 @@ import openai
 openai.api_key = os.environ.get('OPENAI_KEY')
 completion = openai.Completion()
 
-MOODS = {"bonne": "D2-R2 est de très bonne humeur.",
-         "mauvaise": "D2-R2 est de très mauvaise humeur.",
-         "moyenne": "D2-R2 est d'humeur moyenne.",
-         "euphorique": "D2-R2 est euphorique, il adore écrire en majuscule"}
+with open('mood.json', 'r') as f:
+    data = json.load(f)
 
-
-TOPICS = {"blagues": "D2-R2 adore dire des blagues.",
-          "profond": "D2-R2 veut discuter de sujets très profonds tels que la destinée, la mort, le sens de la vie.",
-          "rien": ""}
-
+MOODS = data['mood']
+TOPICS = data['topic']
 
 class ChatBot:
     def __init__(self, debug) -> None:
