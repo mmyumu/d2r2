@@ -26,5 +26,5 @@ module.exports = {
 };
 
 function get_sentence(client, message) {
-    return message.content.replace("<@" + client.user.id + ">", "").trim();
+    return message.cleanContent.replaceAll(client.user.username, "").replaceAll("@", "");
 }
