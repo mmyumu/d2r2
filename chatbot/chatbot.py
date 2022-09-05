@@ -44,6 +44,9 @@ class ChatBot:
         self._update_mood()
 
     def tell(self, user, sentence):
+        assert user is not None
+        assert sentence is not None
+
         self._update_mood()
 
         self._free_memory(user, sentence)
@@ -52,7 +55,7 @@ class ChatBot:
         max_tokens = self._compute_max_tokens(prompt)
 
         if self._debug:
-            answer = "My debug answer"
+            answer = f"My debug answer to {user}"
         else:
             response = completion.create(prompt=prompt, engine="davinci", stop=["\n", f"{self._name}:"], temperature=self._temperature,
                                         top_p=1, frequency_penalty=self._frequency_penalty, presence_penalty=self._presence_penalty, best_of=1,
@@ -60,6 +63,8 @@ class ChatBot:
             answer = response.choices[0].text.strip()
 
         self._update_memory(user, sentence, answer)
+
+        self._last_tell = datetime.datetime.now()
 
         return self._robotify(answer)
 
@@ -83,23 +88,39 @@ class ChatBot:
         max_tokens = self._compute_max_tokens(debug_prompt)
         params = f"frequency_penalty={self._frequency_penalty}, presence_penalty={self._presence_penalty}, temperature={self._temperature}, max_tokens={max_tokens}, debug={self._debug}"
 
-        return f"[{params}]\n{debug_prompt}"
+        last_tell = None
+        if self._last_tell:
+            last_tell = self._last_tell.strftime("%m/%d/%Y, %H:%M:%S")
+        last_mood = None
+        if self._last_mood_update:    
+            last_mood = self._last_mood_update.strftime("%m/%d/%Y, %H:%M:%S")
+
+        params2 = f"last_tell={last_tell}, last_mood_update={last_mood}"
+
+        return f"[{params}]\n[{params2}]\n{debug_prompt}"
 
     def _update_mood(self):
+        update_mood = False
         now = datetime.datetime.now()
 
         # If never updated, then set the mood
         if self._last_mood_update is None:
+            update_mood = True
+        else:
+            # If it's a new day and no one talked to the bot for 30mn
+            if self._last_mood_update.day != now.day:
+                if self._last_tell is None:
+                    update_mood
+                else:
+                    diff_last_tell = now - self._last_tell
+                    diff_mn = diff_last_tell.total_seconds() / 60
+
+                    if diff_mn > 30:
+                        update_mood = True
+
+        if update_mood:
             self.mood = self._compute_mood()
             self._last_mood_update = now
-        else:
-            diff_last_tell = now - self._last_tell
-            diff_mn = diff_last_tell.total_seconds() / 60
-
-            # If it's a new day and noe talked to the bot for 30mn
-            if self._last_mood_update.day != now.day and diff_mn > 30:
-                self.mood = self._compute_mood()
-                self._last_mood_update = now
 
     def _compute_mood(self, key_mood=None, key_topic=None):
         if key_mood and key_mood in MOODS:
