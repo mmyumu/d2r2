@@ -1,5 +1,6 @@
 import os
-from flask import Flask, request
+from flask import Flask, request, json
+from werkzeug.exceptions import HTTPException
 from chatbot import ChatBot
 import hashlib
 
@@ -14,6 +15,11 @@ if not DEBUG:
 
 
 chatbot = ChatBot(debug=DEBUG.lower() == 'true')
+
+
+@app.errorhandler(HTTPException)
+def handle_exception(e):
+    return "Bzzzzkrrrttttt...krshhhhhh...Bzzt!"
 
 
 @app.route("/ping")

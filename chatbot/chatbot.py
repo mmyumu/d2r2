@@ -1,6 +1,7 @@
 import os
 import random
 import datetime
+import json
 
 import openai
 
@@ -8,16 +9,11 @@ import openai
 openai.api_key = os.environ.get('OPENAI_KEY')
 completion = openai.Completion()
 
-MOODS = {"bonne": "D2-R2 est de très bonne humeur.",
-         "mauvaise": "D2-R2 est de très mauvaise humeur.",
-         "moyenne": "D2-R2 est d'humeur moyenne.",
-         "euphorique": "D2-R2 est euphorique, il adore écrire en majuscule"}
+with open('mood.json', 'r') as f:
+    data = json.load(f)
 
-
-TOPICS = {"blagues": "D2-R2 adore dire des blagues.",
-          "profond": "D2-R2 veut discuter de sujets très profonds tels que la destinée, la mort, le sens de la vie.",
-          "rien": ""}
-
+MOODS = data['mood']
+TOPICS = data['topic']
 
 class ChatBot:
     def __init__(self, debug) -> None:
@@ -145,14 +141,14 @@ class ChatBot:
         return f"{self._personality} {self.mood}\n\n{self._examples}\n{memory}\n{user}: {sentence}\n{self._name}:".strip()
 
     def _compute_max_tokens(self, prompt):
-        return min(4000 - len(prompt), 350)
+        return min(2000 - len(prompt), 350)
 
     def _free_memory(self, user, sentence):
         prompt = self._compute_prompt(user, sentence)
 
         while len(prompt) > 1700:
             del self._memory[0]
-            prompt = self._compute_prompt(sentence)
+            prompt = self._compute_prompt(user, sentence)
 
     def _update_memory(self, user, sentence, answer):
         if self._should_add_to_memory(sentence, answer):
