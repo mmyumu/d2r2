@@ -152,7 +152,7 @@ class ChatBot:
 
         while len(prompt) > 1700:
             del self._memory[0]
-            prompt = self._compute_prompt(sentence)
+            prompt = self._compute_prompt(user, sentence)
 
     def _update_memory(self, user, sentence, answer):
         if self._should_add_to_memory(sentence, answer):
