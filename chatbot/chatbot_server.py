@@ -24,12 +24,13 @@ def ping():
 @app.route('/bot', methods=['POST'])
 def bot():
     md5_password = request.json.get('password')
+    user = request.json.get('user')
     sentence = request.json.get('sentence')
 
     if md5_password != hashlib.md5(BOT_PASSWORD.encode('utf-8')).hexdigest():
         return "Password incorrect", 403
 
-    bot_response = chatbot.tell(sentence)
+    bot_response = chatbot.tell(user, sentence)
 
     return bot_response, 200
 

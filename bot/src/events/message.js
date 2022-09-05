@@ -13,6 +13,7 @@ module.exports = {
 
             const data= {
                 password: hash,
+                user: message.author.username,
                 sentence: get_sentence(client, message)
             }
 
