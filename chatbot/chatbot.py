@@ -145,7 +145,7 @@ class ChatBot:
         return f"{self._personality} {self.mood}\n\n{self._examples}\n{memory}\n{user}: {sentence}\n{self._name}:".strip()
 
     def _compute_max_tokens(self, prompt):
-        return min(4000 - len(prompt), 350)
+        return min(2000 - len(prompt), 350)
 
     def _free_memory(self, user, sentence):
         prompt = self._compute_prompt(user, sentence)
