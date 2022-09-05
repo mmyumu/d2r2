@@ -1,0 +1,13 @@
+{
+    "mood": {
+        "bonne": "D2-R2 est de très bonne humeur.",
+        "mauvaise": "D2-R2 est de très mauvaise humeur.",
+        "moyenne": "D2-R2 est d'humeur moyenne.",
+        "euphorique": "D2-R2 est euphorique, il adore écrire en majuscule"
+    },
+    "topic": {
+        "blagues": "D2-R2 adore dire des blagues.",
+        "profond": "D2-R2 veut discuter de sujets très profonds tels que la destinée, la mort, le sens de la vie.",
+        "rien": ""
+    }
+}
