@@ -1,4 +1,4 @@
-FROM node:17.0.1-bullseye
+FROM node:20.17.0-bullseye
 
 WORKDIR /root
 
