@@ -1,0 +1,736 @@
+{
+    "sounds": [
+        {
+            "title": "alloalloooo",
+            "file": "Autres/alloalloooo.mp3"
+        },
+        {
+            "title": "angelo",
+            "file": "Autres/angelo.mp3"
+        },
+        {
+            "title": "arretetesdebats",
+            "file": "Autres/arretetesdebats.mp3"
+        },
+        {
+            "title": "bijouxgerardtagueule",
+            "file": "Autres/bijouxgerardtagueule.mp3"
+        },
+        {
+            "title": "bingo",
+            "file": "Autres/bingo.mp3"
+        },
+        {
+            "title": "bjiouxahcestachier",
+            "file": "Autres/bjiouxahcestachier.mp3"
+        },
+        {
+            "title": "bjiouxtesdebatilssontininteressants",
+            "file": "Autres/bjiouxtesdebatilssontininteressants.mp3"
+        },
+        {
+            "title": "bouing",
+            "file": "Autres/bouing.mp3"
+        },
+        {
+            "title": "bubblegum",
+            "file": "Autres/bubblegum.mp3"
+        },
+        {
+            "title": "capitainecaverne",
+            "file": "Autres/capitainecaverne.mp3"
+        },
+        {
+            "title": "cestdelabombe",
+            "file": "Autres/cestdelabombe.mp3"
+        },
+        {
+            "title": "cestdudelire",
+            "file": "Autres/cestdudelire.mp3"
+        },
+        {
+            "title": "cesttoilepetitquiboiteavecunemoustache",
+            "file": "Autres/cesttoilepetitquiboiteavecunemoustache.mp3"
+        },
+        {
+            "title": "choupachoups",
+            "file": "Autres/choupachoups.mp3"
+        },
+        {
+            "title": "chupachups",
+            "file": "Autres/chupachups.mp3"
+        },
+        {
+            "title": "eddiemitchell",
+            "file": "Autres/eddiemitchell.mp3"
+        },
+        {
+            "title": "ehcestfauxcquetudis",
+            "file": "Autres/ehcestfauxcquetudis.mp3"
+        },
+        {
+            "title": "ehgerardvamechercheruncafe",
+            "file": "Autres/ehgerardvamechercheruncafe.mp3"
+        },
+        {
+            "title": "francoisetagueuleavantlamienne",
+            "file": "Autres/francoisetagueuleavantlamienne.mp3"
+        },
+        {
+            "title": "gegecestvraiquetupetesaulit",
+            "file": "Autres/gegecestvraiquetupetesaulit.mp3"
+        },
+        {
+            "title": "gerardauboisdeboulogne",
+            "file": "Autres/gerardauboisdeboulogne.mp3"
+        },
+        {
+            "title": "gerardcestvraiquetucouches",
+            "file": "Autres/gerardcestvraiquetucouches.mp3"
+        },
+        {
+            "title": "gerardgerardgerardfermetagueule",
+            "file": "Autres/gerardgerardgerardfermetagueule.mp3"
+        },
+        {
+            "title": "gerardtagueuletagueule",
+            "file": "Autres/gerardtagueuletagueule.mp3"
+        },
+        {
+            "title": "gerardtupeuxmettreundisque",
+            "file": "Autres/gerardtupeuxmettreundisque.mp3"
+        },
+        {
+            "title": "hommedelaprehistoireconnard",
+            "file": "Autres/hommedelaprehistoireconnard.mp3"
+        },
+        {
+            "title": "ilestdjsurnrj",
+            "file": "Autres/ilestdjsurnrj.mp3"
+        },
+        {
+            "title": "inserttagueule",
+            "file": "Autres/inserttagueule.mp3"
+        },
+        {
+            "title": "jinglejoedassin",
+            "file": "Autres/jinglejoedassin.mp3"
+        },
+        {
+            "title": "jmappellesuztjfais200kilos",
+            "file": "Autres/jmappellesuztjfais200kilos.mp3"
+        },
+        {
+            "title": "jordanmemepasdepoilsatateub",
+            "file": "Autres/jordanmemepasdepoilsatateub.mp3"
+        },
+        {
+            "title": "jordanvatefairepeterleculparchirac",
+            "file": "Autres/jordanvatefairepeterleculparchirac.mp3"
+        },
+        {
+            "title": "jordanvatependre",
+            "file": "Autres/jordanvatependre.mp3"
+        },
+        {
+            "title": "salutcestalliage",
+            "file": "Autres/salutcestalliage.mp3"
+        },
+        {
+            "title": "silencieux",
+            "file": "Autres/silencieux.mp3"
+        },
+        {
+            "title": "spcausetoujoursgrossecone",
+            "file": "Autres/spcausetoujoursgrossecone.mp3"
+        },
+        {
+            "title": "spestcequilstontplaceunesondeanale",
+            "file": "Autres/spestcequilstontplaceunesondeanale.mp3"
+        },
+        {
+            "title": "splesmartiensilstontmis",
+            "file": "Autres/splesmartiensilstontmis.mp3"
+        },
+        {
+            "title": "sptagueuleespecedeconnard",
+            "file": "Autres/sptagueuleespecedeconnard.mp3"
+        },
+        {
+            "title": "sptupeuxtecasser",
+            "file": "Autres/sptupeuxtecasser.mp3"
+        },
+        {
+            "title": "spvatenespecedegodemichet",
+            "file": "Autres/spvatenespecedegodemichet.mp3"
+        },
+        {
+            "title": "taistoilagrosse",
+            "file": "Autres/taistoilagrosse.mp3"
+        },
+        {
+            "title": "toujoursdaccordpourlerdvdemain",
+            "file": "Autres/toujoursdaccordpourlerdvdemain.mp3"
+        },
+        {
+            "title": "tucartonnes",
+            "file": "Autres/tucartonnes.mp3"
+        },
+        {
+            "title": "tupeuxrepeterla1erequestiondudebat",
+            "file": "Autres/tupeuxrepeterla1erequestiondudebat.mp3"
+        },
+        {
+            "title": "wazaaaa",
+            "file": "Autres/wazaaaa.mp3"
+        },
+        {
+            "title": "dingdinguedong",
+            "file": "Christine/dingdinguedong.mp3"
+        },
+        {
+            "title": "mettreuncotontigedanssoncul",
+            "file": "Christine/mettreuncotontigedanssoncul.mp3"
+        },
+        {
+            "title": "vasyvasycestbon",
+            "file": "Christine/vasyvasycestbon.mp3"
+        },
+        {
+            "title": "vatelaverlesfessestupues",
+            "file": "Christine/vatelaverlesfessestupues.mp3"
+        },
+        {
+            "title": "yjouillaitpas",
+            "file": "Christine/yjouillaitpas.mp3"
+        },
+        {
+            "title": "ymontaitsurmoicesttout",
+            "file": "Christine/ymontaitsurmoicesttout.mp3"
+        },
+        {
+            "title": "apocesttoiquiapisse",
+            "file": "Equipe/apocesttoiquiapisse.mp3"
+        },
+        {
+            "title": "appogerardjeteveux",
+            "file": "Equipe/appogerardjeteveux.mp3"
+        },
+        {
+            "title": "appogerardviensjenpeuxplus",
+            "file": "Equipe/appogerardviensjenpeuxplus.mp3"
+        },
+        {
+            "title": "appometstondardansmachatte",
+            "file": "Equipe/appometstondardansmachatte.mp3"
+        },
+        {
+            "title": "manuok",
+            "file": "Equipe/manuok.mp3"
+        },
+        {
+            "title": "manututefaiscestpaspossible",
+            "file": "Equipe/manututefaiscestpaspossible.mp3"
+        },
+        {
+            "title": "onacceuilletulereprends",
+            "file": "Equipe/onacceuilletulereprends.mp3"
+        },
+        {
+            "title": "phildarfairegueulerlemoustachu",
+            "file": "Equipe/phildarfairegueulerlemoustachu.mp3"
+        },
+        {
+            "title": "31pensentquecestdangereuxpourlanus",
+            "file": "Gégé/31pensentquecestdangereuxpourlanus.mp3"
+        },
+        {
+            "title": "3615ulla",
+            "file": "Gégé/3615ulla.mp3"
+        },
+        {
+            "title": "6minutes",
+            "file": "Gégé/6minutes.mp3"
+        },
+        {
+            "title": "abrouti",
+            "file": "Gégé/abrouti.mp3"
+        },
+        {
+            "title": "abroutivatefairesautertoiconnard",
+            "file": "Gégé/abroutivatefairesautertoiconnard.mp3"
+        },
+        {
+            "title": "allezaurevoirpfitbonnennuit",
+            "file": "Gégé/allezaurevoirpfitbonnennuit.mp3"
+        },
+        {
+            "title": "allezhop",
+            "file": "Gégé/allezhop.mp3"
+        },
+        {
+            "title": "allezhopmoijarrete",
+            "file": "Gégé/allezhopmoijarrete.mp3"
+        },
+        {
+            "title": "arretezdemeprendrepourdescons",
+            "file": "Gégé/arretezdemeprendrepourdescons.mp3"
+        },
+        {
+            "title": "aurevoir",
+            "file": "Gégé/aurevoir.mp3"
+        },
+        {
+            "title": "avecunconcommemoionsamuse",
+            "file": "Gégé/avecunconcommemoionsamuse.mp3"
+        },
+        {
+            "title": "bonbeeeeen",
+            "file": "Gégé/bonbeeeeen.mp3"
+        },
+        {
+            "title": "bonbencestbien",
+            "file": "Gégé/bonbencestbien.mp3"
+        },
+        {
+            "title": "bonbenonon",
+            "file": "Gégé/bonbenonon.mp3"
+        },
+        {
+            "title": "bonsoiratousetatoutes",
+            "file": "Gégé/bonsoiratousetatoutes.mp3"
+        },
+        {
+            "title": "bonsoirconnasse",
+            "file": "Gégé/bonsoirconnasse.mp3"
+        },
+        {
+            "title": "casetermineautribunal",
+            "file": "Gégé/casetermineautribunal.mp3"
+        },
+        {
+            "title": "celuiquireniflecommeunbouc",
+            "file": "Gégé/celuiquireniflecommeunbouc.mp3"
+        },
+        {
+            "title": "celuiquisamuseadireenculetoncul",
+            "file": "Gégé/celuiquisamuseadireenculetoncul.mp3"
+        },
+        {
+            "title": "cestcatasraison",
+            "file": "Gégé/cestcatasraison.mp3"
+        },
+        {
+            "title": "cestclairetnetvoussaquez",
+            "file": "Gégé/cestclairetnetvoussaquez.mp3"
+        },
+        {
+            "title": "cestimpossib",
+            "file": "Gégé/cestimpossib.mp3"
+        },
+        {
+            "title": "cestlamaindemasoeur",
+            "file": "Gégé/cestlamaindemasoeur.mp3"
+        },
+        {
+            "title": "cestlesdeuxpdsdelabandefm",
+            "file": "Gégé/cestlesdeuxpdsdelabandefm.mp3"
+        },
+        {
+            "title": "cestmoiquicommande",
+            "file": "Gégé/cestmoiquicommande.mp3"
+        },
+        {
+            "title": "cestpastoiquicommandeok",
+            "file": "Gégé/cestpastoiquicommandeok.mp3"
+        },
+        {
+            "title": "cestquoictebordelquetumfais",
+            "file": "Gégé/cestquoictebordelquetumfais.mp3"
+        },
+        {
+            "title": "cestsimplecestclairetnetcavaallervite",
+            "file": "Gégé/cestsimplecestclairetnetcavaallervite.mp3"
+        },
+        {
+            "title": "cesttousdesconsatroyes",
+            "file": "Gégé/cesttousdesconsatroyes.mp3"
+        },
+        {
+            "title": "chaispasjaipasregarde",
+            "file": "Gégé/chaispasjaipasregarde.mp3"
+        },
+        {
+            "title": "chiesurlatable",
+            "file": "Gégé/chiesurlatable.mp3"
+        },
+        {
+            "title": "completementconnard",
+            "file": "Gégé/completementconnard.mp3"
+        },
+        {
+            "title": "conclusion",
+            "file": "Gégé/conclusion.mp3"
+        },
+        {
+            "title": "connardsdetroyes",
+            "file": "Gégé/connardsdetroyes.mp3"
+        },
+        {
+            "title": "debatsurtamere",
+            "file": "Gégé/debatsurtamere.mp3"
+        },
+        {
+            "title": "defonceurdegrosculiltemmerde",
+            "file": "Gégé/defonceurdegrosculiltemmerde.mp3"
+        },
+        {
+            "title": "dejapourlinstanttufermestagueule",
+            "file": "Gégé/dejapourlinstanttufermestagueule.mp3"
+        },
+        {
+            "title": "delasaucetomateabrouti",
+            "file": "Gégé/delasaucetomateabrouti.mp3"
+        },
+        {
+            "title": "desmonsieursjenchie",
+            "file": "Gégé/desmonsieursjenchie.mp3"
+        },
+        {
+            "title": "doncvoila",
+            "file": "Gégé/doncvoila.mp3"
+        },
+        {
+            "title": "especedetravelot",
+            "file": "Gégé/especedetravelot.mp3"
+        },
+        {
+            "title": "especedetravelotnon",
+            "file": "Gégé/especedetravelotnon.mp3"
+        },
+        {
+            "title": "euheuh",
+            "file": "Gégé/euheuh.mp3"
+        },
+        {
+            "title": "euuuuuh",
+            "file": "Gégé/euuuuuh.mp3"
+        },
+        {
+            "title": "foutezvousdemagueuleallezhop",
+            "file": "Gégé/foutezvousdemagueuleallezhop.mp3"
+        },
+        {
+            "title": "gegesinge",
+            "file": "Gégé/gegesinge.mp3"
+        },
+        {
+            "title": "gerardviensmonpetitcohon",
+            "file": "Gégé/gerardviensmonpetitcohon.mp3"
+        },
+        {
+            "title": "jaiditquonparlaitpasdelaloco",
+            "file": "Gégé/jaiditquonparlaitpasdelaloco.mp3"
+        },
+        {
+            "title": "jailamentendu",
+            "file": "Gégé/jailamentendu.mp3"
+        },
+        {
+            "title": "jecommenceaenavoirrasleboldeshabituels",
+            "file": "Gégé/jecommenceaenavoirrasleboldeshabituels.mp3"
+        },
+        {
+            "title": "jesensquivayavoirunereugnion",
+            "file": "Gégé/jesensquivayavoirunereugnion.mp3"
+        },
+        {
+            "title": "jesuispasentraindeteparlerdupontdelalma",
+            "file": "Gégé/jesuispasentraindeteparlerdupontdelalma.mp3"
+        },
+        {
+            "title": "jevousprevienslestandard",
+            "file": "Gégé/jevousprevienslestandard.mp3"
+        },
+        {
+            "title": "joeturbo",
+            "file": "Gégé/joeturbo.mp3"
+        },
+        {
+            "title": "lemieuxcestdevolerdansunsacamain",
+            "file": "Gégé/lemieuxcestdevolerdansunsacamain.mp3"
+        },
+        {
+            "title": "lesnainconnusmoustachus",
+            "file": "Gégé/lesnainconnusmoustachus.mp3"
+        },
+        {
+            "title": "manuuu",
+            "file": "Gégé/manuuu.mp3"
+        },
+        {
+            "title": "monterunharem",
+            "file": "Gégé/monterunharem.mp3"
+        },
+        {
+            "title": "nannanattaattanannan",
+            "file": "Gégé/nannanattaattanannan.mp3"
+        },
+        {
+            "title": "nannannannannan",
+            "file": "Gégé/nannannannannan.mp3"
+        },
+        {
+            "title": "nannannannannan2",
+            "file": "Gégé/nannannannannan2.mp3"
+        },
+        {
+            "title": "ohcestquoilacebordel",
+            "file": "Gégé/ohcestquoilacebordel.mp3"
+        },
+        {
+            "title": "ohlala",
+            "file": "Gégé/ohlala.mp3"
+        },
+        {
+            "title": "ohletravelotla",
+            "file": "Gégé/ohletravelotla.mp3"
+        },
+        {
+            "title": "ohtagueuleeuh",
+            "file": "Gégé/ohtagueuleeuh.mp3"
+        },
+        {
+            "title": "ohtutereveillesouquoi",
+            "file": "Gégé/ohtutereveillesouquoi.mp3"
+        },
+        {
+            "title": "okpointfinalalaligne",
+            "file": "Gégé/okpointfinalalaligne.mp3"
+        },
+        {
+            "title": "oksalutconnard",
+            "file": "Gégé/oksalutconnard.mp3"
+        },
+        {
+            "title": "olivier",
+            "file": "Gégé/olivier.mp3"
+        },
+        {
+            "title": "ouaisnonmaistamniere",
+            "file": "Gégé/ouaisnonmaistamniere.mp3"
+        },
+        {
+            "title": "parmomentsjemedemande",
+            "file": "Gégé/parmomentsjemedemande.mp3"
+        },
+        {
+            "title": "payeatbranlerlescouilles",
+            "file": "Gégé/payeatbranlerlescouilles.mp3"
+        },
+        {
+            "title": "phildaaaaaar",
+            "file": "Gégé/phildaaaaaar.mp3"
+        },
+        {
+            "title": "phildaaaaar",
+            "file": "Gégé/phildaaaaar.mp3"
+        },
+        {
+            "title": "phildartuarretesencule",
+            "file": "Gégé/phildartuarretesencule.mp3"
+        },
+        {
+            "title": "pourlinstantvousallezfermervosgueules",
+            "file": "Gégé/pourlinstantvousallezfermervosgueules.mp3"
+        },
+        {
+            "title": "putain",
+            "file": "Gégé/putain.mp3"
+        },
+        {
+            "title": "putainlelarseneuh",
+            "file": "Gégé/putainlelarseneuh.mp3"
+        },
+        {
+            "title": "putainmaiscestquoictebordel",
+            "file": "Gégé/putainmaiscestquoictebordel.mp3"
+        },
+        {
+            "title": "quelquechosedemignon",
+            "file": "Gégé/quelquechosedemignon.mp3"
+        },
+        {
+            "title": "reegolasalope",
+            "file": "Gégé/reegolasalope.mp3"
+        },
+        {
+            "title": "sijseraispasintelligent",
+            "file": "Gégé/sijseraispasintelligent.mp3"
+        },
+        {
+            "title": "sivousaimezlarouteallezy",
+            "file": "Gégé/sivousaimezlarouteallezy.mp3"
+        },
+        {
+            "title": "tagueuleatoiderriere",
+            "file": "Gégé/tagueuleatoiderriere.mp3"
+        },
+        {
+            "title": "tagueulesalope",
+            "file": "Gégé/tagueulesalope.mp3"
+        },
+        {
+            "title": "tagueultamereelletemmerde",
+            "file": "Gégé/tagueultamereelletemmerde.mp3"
+        },
+        {
+            "title": "tagueuuuule",
+            "file": "Gégé/tagueuuuule.mp3"
+        },
+        {
+            "title": "taguuuueule",
+            "file": "Gégé/taguuuueule.mp3"
+        },
+        {
+            "title": "tesunefilsdeputetudegages",
+            "file": "Gégé/tesunefilsdeputetudegages.mp3"
+        },
+        {
+            "title": "tubossescorrectement",
+            "file": "Gégé/tubossescorrectement.mp3"
+        },
+        {
+            "title": "tuparlesencoreplusfortjecomprendspas",
+            "file": "Gégé/tuparlesencoreplusfortjecomprendspas.mp3"
+        },
+        {
+            "title": "tusaislevieuxporc",
+            "file": "Gégé/tusaislevieuxporc.mp3"
+        },
+        {
+            "title": "tutecraseslapouffiasse",
+            "file": "Gégé/tutecraseslapouffiasse.mp3"
+        },
+        {
+            "title": "tuvasdanslesbaignoires",
+            "file": "Gégé/tuvasdanslesbaignoires.mp3"
+        },
+        {
+            "title": "tuvaspasmecasserlercouilleslongtempstoi",
+            "file": "Gégé/tuvaspasmecasserlercouilleslongtempstoi.mp3"
+        },
+        {
+            "title": "vastefairefoutreabrouti",
+            "file": "Gégé/vastefairefoutreabrouti.mp3"
+        },
+        {
+            "title": "vatefaireenculersalope",
+            "file": "Gégé/vatefaireenculersalope.mp3"
+        },
+        {
+            "title": "vatefairefoutretoiespecedepetasse",
+            "file": "Gégé/vatefairefoutretoiespecedepetasse.mp3"
+        },
+        {
+            "title": "versdeterredanssoncul",
+            "file": "Gégé/versdeterredanssoncul.mp3"
+        },
+        {
+            "title": "vosgueules",
+            "file": "Gégé/vosgueules.mp3"
+        },
+        {
+            "title": "vousarretezderrierederonflercommedesputes",
+            "file": "Gégé/vousarretezderrierederonflercommedesputes.mp3"
+        },
+        {
+            "title": "vouscommencezamenerver",
+            "file": "Gégé/vouscommencezamenerver.mp3"
+        },
+        {
+            "title": "yauntrucquifautbiensedire",
+            "file": "Gégé/yauntrucquifautbiensedire.mp3"
+        },
+        {
+            "title": "arnetjecoutefunajolo",
+            "file": "Habituels/arnetjecoutefunajolo.mp3"
+        },
+        {
+            "title": "arnetoklemec1",
+            "file": "Habituels/arnetoklemec1.mp3"
+        },
+        {
+            "title": "arnetoklemec2",
+            "file": "Habituels/arnetoklemec2.mp3"
+        },
+        {
+            "title": "arnetokmichel",
+            "file": "Habituels/arnetokmichel.mp3"
+        },
+        {
+            "title": "arnetpotesdelacitepouces",
+            "file": "Habituels/arnetpotesdelacitepouces.mp3"
+        },
+        {
+            "title": "arnoldbienvenuesurlerepondeur",
+            "file": "Habituels/arnoldbienvenuesurlerepondeur.mp3"
+        },
+        {
+            "title": "arnoldmistercouzin",
+            "file": "Habituels/arnoldmistercouzin.mp3"
+        },
+        {
+            "title": "arnoldmonsieurcouzin",
+            "file": "Habituels/arnoldmonsieurcouzin.mp3"
+        },
+        {
+            "title": "auditeursbonbenonon",
+            "file": "Habituels/auditeursbonbenonon.mp3"
+        },
+        {
+            "title": "couscous",
+            "file": "Habituels/couscous.mp3"
+        },
+        {
+            "title": "goldosecteuratagueeeeeule",
+            "file": "Habituels/goldosecteuratagueeeeeule.mp3"
+        },
+        {
+            "title": "jecoutefun",
+            "file": "Habituels/jecoutefun.mp3"
+        },
+        {
+            "title": "yapasdhabituels",
+            "file": "Habituels/yapasdhabituels.mp3"
+        },
+        {
+            "title": "ypiquaitdesheuresdansmasemaine",
+            "file": "Habituels/ypiquaitdesheuresdansmasemaine.mp3"
+        },
+        {
+            "title": "yvolaitdescollections",
+            "file": "Habituels/yvolaitdescollections.mp3"
+        },
+        {
+            "title": "alorsmoisandyjadorelasodomie",
+            "file": "Sandy/alorsmoisandyjadorelasodomie.mp3"
+        },
+        {
+            "title": "calins",
+            "file": "Sandy/calins.mp3"
+        },
+        {
+            "title": "enculemoijadoreca",
+            "file": "Sandy/enculemoijadoreca.mp3"
+        },
+        {
+            "title": "jouissance",
+            "file": "Sandy/jouissance.mp3"
+        },
+        {
+            "title": "vasygerardenculemoi",
+            "file": "Sandy/vasygerardenculemoi.mp3"
+        }
+    ]
+}

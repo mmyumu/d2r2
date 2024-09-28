@@ -2,7 +2,7 @@ const resourceDir = '../resources/tfbh';
 const resTemplates = require(`${resourceDir}/modeles.json`);
 const resConjunctions = require(`${resourceDir}/conjonctions.json`);
 const resWords = require(`${resourceDir}/mots.json`);
-const { MessageAttachment } = require('discord.js');
+const { AttachmentBuilder } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { registerFont, createCanvas, loadImage } = require('canvas');
 
@@ -102,7 +102,7 @@ async function buildAttachment(line1, line2 = false) {
     const canvas = await buildCanvas(line1, line2);
 
     // Use the helpful Attachment class structure to process the file for you
-    const attachment = new MessageAttachment(canvas.toBuffer(), 'tfbh.png');
+    const attachment = new AttachmentBuilder(canvas.toBuffer(), {'name': 'tfbh.png'});
 
     return attachment;
 }
