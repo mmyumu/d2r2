@@ -198,13 +198,15 @@ async function playSound(sounds, interaction, resourceDir) {
 function getSoundName(sounds, sound, keywords) {
     let soundName = null;
     if (sound) {
-
+        let sound_filename;
         if (!sound.endsWith('.mp3')) {
-            sound += '.mp3';
+            sound_filename += '.mp3';
+        } else {
+            sound_filename = sound;
         }
 
         for (const d of Object.values(sounds)) {
-            if (d.file === sound || d.title === sound) {
+            if (d.file === sound_filename || d.title === sound) {
                 soundName = d.file;
                 break;
             }

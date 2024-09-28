@@ -1,4 +1,4 @@
-FROM node:17.0.1-bullseye
+FROM node:20.17.0-bullseye
 
 WORKDIR /root
 
@@ -10,4 +10,4 @@ RUN npm install
 
 ADD src .
 
-CMD [ "node", "index.js" ]
+CMD [ "node", "index.js", "config/config_prod.json" ]
