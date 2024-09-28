@@ -3,7 +3,7 @@ const { join } = require('path');
 const stringSimilarity = require('string-similarity');
 const { joinVoiceChannel, createAudioResource, createAudioPlayer, AudioPlayerStatus } = require('@discordjs/voice');
 const { SlashCommandBuilder } = require('@discordjs/builders');
-const { MessageActionRow, MessageSelectMenu, MessageEmbed } = require('discord.js');
+const { ActionRowBuilder, StringSelectMenuBuilder, EmbedBuilder } = require('discord.js');
 const { v4: uuidv4 } = require('uuid');
 const discordUtils = require('./discordUtils');
 const { commands } = require('./cachedCommands');
@@ -52,7 +52,7 @@ async function execute(commandName, interaction, sounds, resourceDir) {
         } else if (interaction.options.getSubcommand() === 'list') {
             await listSounds(commandName, sounds, interaction);
         }
-    } else if (interaction.isSelectMenu()) {
+    } else if (interaction.isStringSelectMenu()) {
         await interaction.deferUpdate();
         const tokens = interaction.customId.split('|');
 
@@ -102,9 +102,9 @@ async function searchForSounds(commandName, sounds, interaction) {
             target_id_str = `|${cmd_uuid}`;
         }
 
-        const row = new MessageActionRow()
+        const row = new ActionRowBuilder()
             .addComponents(
-                new MessageSelectMenu()
+                new StringSelectMenuBuilder()
                     .setCustomId(`${commandName}${target_id_str}`)
                     .setPlaceholder('Nothing selected')
                     .addOptions(options),
@@ -132,7 +132,7 @@ function createEmbed(commandName) {
     const title = `List of ${commandName} sounds`;
     const description = `You can use /${commandName} play sound:<sound name> with the following names`;
 
-    return new MessageEmbed()
+    return new EmbedBuilder()
         .setColor('#0099ff')
         .setTitle(title)
         // .setURL('https://discord.js.org/')
@@ -153,12 +153,11 @@ async function listSounds(commandName, sounds, interaction) {
     const fields = [];
     for (const index in sortedSounds) {
         const sound = sortedSounds[index];
-        const soundName = sound.file.slice(0, sound.file.length - 4);
-        if (value.length + ('\n' + soundName).length > 1024) {
+        if (value.length + ('\n' + sound.title).length > 1024) {
             fields.push(value);
             value = '';
         }
-        value += '\n' + soundName;
+        value += '\n' + sound.title;
     }
     fields.push(value);
 
@@ -170,7 +169,7 @@ async function listSounds(commandName, sounds, interaction) {
             listEmbeds.push(listEmbed);
             listEmbed = createEmbed(commandName);
         }
-        listEmbed.addField('Sound name', field, true);
+        listEmbed.addFields([{'name': 'Sound name', 'value': field, 'inline': true}]);
     }
     listEmbeds.push(listEmbed);
 
@@ -240,7 +239,7 @@ async function playSoundInVoiceChannel(interaction, soundName, voiceChannel, res
     }
 
     const mp3Path = join(__dirname, `../commands/${resourceDir}/${soundName}`);
-    console.debug(`Playing ${soundName}`);
+    console.debug(`Playing ${soundName} on guild ${voiceChannel.guild.id} and channel ${voiceChannel.id}`);
     const resource = createAudioResource(mp3Path, {
         metadata: {
             title: `Sound: ${soundName}`,

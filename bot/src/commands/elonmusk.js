@@ -2,7 +2,7 @@ const resourceDir = '../resources/elonmusk/';
 const resCompanies = require(`${resourceDir}/companies.json`);
 const resActions = require(`${resourceDir}/actions.json`);
 const resObjects = require(`${resourceDir}/objects.json`);
-const { MessageAttachment } = require('discord.js');
+const { AttachmentBuilder } = require('discord.js');
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const { registerFont, createCanvas, loadImage } = require('canvas');
 
@@ -68,7 +68,7 @@ async function buildAttachment(line) {
     const canvas = await buildCanvas(line);
 
     // Use the helpful Attachment class structure to process the file for you
-    const attachment = new MessageAttachment(canvas.toBuffer(), 'elonmusk.png');
+    const attachment = new AttachmentBuilder(canvas.toBuffer(), {'name': 'elonmusk.png'});
 
     return attachment;
 }

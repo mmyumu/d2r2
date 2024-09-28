@@ -7,12 +7,12 @@ module.exports = {
             console.log(`${interaction.user.tag} in #${interaction.channel.name} triggered an interaction: ${interaction.commandName}`);
         }
 
-        // if (!interaction.isCommand() && !interaction.isSelectMenu()) return;
+        // if (!interaction.isCommand() && !interaction.isStringSelectMenu()) return;
 
         let commandId = null;
         if (interaction.isCommand()) {
             commandId = interaction.commandName;
-        } else if (interaction.isSelectMenu()) {
+        } else if (interaction.isStringSelectMenu()) {
             const customId = interaction.customId.split('|')[0];
             commandId = customId;
         }
