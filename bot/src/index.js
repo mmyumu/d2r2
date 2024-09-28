@@ -1,7 +1,17 @@
 const fs = require('fs');
-const { Client, Collection, GatewayIntentBits } = require('discord.js');
-const { token } = require('./config.json');
+const { Client, Collection, GatewayIntentBits, ReactionUserManager } = require('discord.js');
 require('log-timestamp');
+
+
+if (process.argv.length !== 3) {
+	console.error('Bad usage')
+	return
+}
+
+const config_json_path = process.argv[2]
+const { token } = require('./' + config_json_path);
+
+console.log(`Running bot with configuration: ${config_json_path}`)
 
 const client = new Client({ fetchAllMembers: true, intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildVoiceStates, GatewayIntentBits.GuildMessages] });
 

@@ -10,4 +10,4 @@ RUN npm install
 
 ADD src .
 
-CMD [ "node", "index.js" ]
+CMD [ "node", "index.js", "config/config_prod.json" ]
