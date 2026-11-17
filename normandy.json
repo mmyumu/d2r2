@@ -1,0 +1,8 @@
+{"tests": ["tests.yml"],
+ "components": [
+  {"name": "Docs and tests", "deploy": "none", "paths": ["README.md", "CLAUDE.md", "normandy.json", ".gitignore", ".github/**", "bot/test/**", "bot/jest.config.js", "bot/babel.config.js", "bot/.eslintrc.json", "bot/docker", "chatbot/docker", "lego-house/docker", "**/__pycache__/**"]},
+  {"name": "Web server", "deploy": "none", "paths": ["webserver/**"]},
+  {"name": "Discord bot", "deploy": "auto", "paths": ["bot/**"], "containers": ["d2r2"]},
+  {"name": "Chatbot", "deploy": "auto", "paths": ["chatbot/**"], "containers": ["chatbot"]},
+  {"name": "Lego house", "deploy": "manual", "paths": ["lego-house/**"], "containers": ["lego-house"], "how": "It runs on pi3 (camera) as lego-house:<version>-armv7, outside any release: build the image on pi3 from lego-house/, run it in place of the old one with the same name, port 10001 and restart policy, then check /ping answers."}
+ ]}

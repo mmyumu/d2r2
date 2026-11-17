@@ -35,4 +35,10 @@ for (const file of eventFiles) {
 	}
 }
 
+// Docker's health check reads this file: rewritten while the bot is connected to Discord, it goes stale when it is cut off.
+const HEARTBEAT = '/tmp/d2r2-alive';
+setInterval(() => {
+	if (client.isReady()) fs.writeFileSync(HEARTBEAT, String(Date.now()));
+}, 30 * 1000);
+
 client.login(token);

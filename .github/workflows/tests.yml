@@ -1,0 +1,25 @@
+name: Tests
+# Normandy reruns it every night on main (workflow_dispatch): keep that trigger.
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  bot:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: bot
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          # As the bot's image.
+          node-version: "20.17.0"
+          cache: npm
+          cache-dependency-path: bot/package-lock.json
+      - run: npm ci
+      - run: npm test
